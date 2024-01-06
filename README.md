@@ -1,6 +1,7 @@
 # ECON408 Winter 2024
-- It is strongly suggested to get GitHub's [student developer pack](https://education.github.com/pack) which gives you lots of free stuff (and even access to the AI [GitHub Copilot](https://docs.github.com/en/copilot/quickstart) )
-- Optionally, select `Watch` at the top of this repository to be alerted to all file changes
+Open as website [here](https://ubcecon.github.io/ECON408/)
+
+It is strongly suggested to get GitHub's [student developer pack](https://education.github.com/pack) which gives you lots of free stuff (and even access to the AI [GitHub Copilot](https://docs.github.com/en/copilot/quickstart) ). Optionally, select `Watch` at the top of this repository to be alerted to all file changes
 
 ## Syllabus
 See [here](syllabus.md) for more details, a course outline, and grading information.
