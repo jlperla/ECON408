@@ -1,4 +1,4 @@
-# ECON408 Winter 20XX
+# ECON408 Winter 2024
 - It is strongly suggested to get GitHub's [student developer pack](https://education.github.com/pack) which gives you lots of free stuff (and even access to the AI [GitHub Copilot](https://docs.github.com/en/copilot/quickstart) )
 - Optionally, select `Watch` at the top of this repository to be alerted to all file changes
 
@@ -23,8 +23,8 @@ All problem set solutions should be submitted on Canvas directly as a `.ipynb` f
 
 ## Lectures
 The first few weeks will introduce Julia, and then we will move on to the core topics of the course which will be a combination of theory and computational examples.
-1. **January 8th** - 
-2. **January 10th** - 
+1. **January 8th** - Introduction, course overview, VSCode and [Julia Overview](https://julia.quantecon.org/getting_started_julia/getting_started.html) and [Introductory Examples](https://julia.quantecon.org/getting_started_julia/julia_by_example.html)
+2. **January 10th** - [Introductory examples/fixed point problems](https://julia.quantecon.org/getting_started_julia/julia_by_example.html) including examples from linear-asset pricing
 3. **January 15th** - 
 4. **January 17th** - 
 5. **January 22nd** - 
@@ -34,11 +34,11 @@ The first few weeks will introduce Julia, and then we will move on to the core t
 9. **February 5th** - 
 10. **February 7th** - 
 11. **February 12th** - 
-12. **February 14th** - 
+12. **February 14th** - Possible Midterm
 13. **February 19th** - MIDTERM BREAK
 14. **February 21st** - MIDTERM BREAK
 15. **February 26th** - 
-16. **February 28th** - 
+16. **February 28th** - Possible Midterm
 17. **March 4th** - 
 18. **March 6th** - 
 19. **March 11th** - 
