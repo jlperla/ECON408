@@ -1,5 +1,5 @@
 # ECON408 Winter 2024
-Open as website [here](https://ubcecon.github.io/ECON408/)
+Open as website [here](https://jlperla.github.io/ECON408/)
 
 It is strongly suggested to get GitHub's [student developer pack](https://education.github.com/pack) which gives you lots of free stuff (and even access to the AI [GitHub Copilot](https://docs.github.com/en/copilot/quickstart) ). Optionally, select `Watch` at the top of this repository to be alerted to all file changes
 
@@ -8,7 +8,8 @@ See [here](syllabus.md) for more details, a course outline, and grading informat
 
 ## Problem Sets and Exams
 
-1. **Due Midnight PST on January 14th** - Problem Set 0. This is a pass/fail problem set (i.e., hand it in you pass!) just to ensure you have setup your computer properly  [Problem Set 0](/problem_sets/problem_set_0.ipynb)
+1. **Due Midnight PST on January 14th** - [Problem Set 0](/problem_sets/problem_set_0.ipynb)
+   - This is a pass/fail problem set (i.e., hand it in you pass!) just to ensure you have setup your computer properly 
 2. **Due Midnight PST on TBD** - Problem Set 1 <!-- [Problem Set 1](/problem_sets/problem_set_1.ipynb) -->
 3. **Due Midnight PST on TBD** - Problem Set 2 <!-- [Problem Set 2](/problem_sets/problem_set_2.ipynb) -->
 4. **Reviewing around February 14th** - Midterm Practice Problems  <!--[Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb) -->
@@ -16,7 +17,7 @@ See [here](syllabus.md) for more details, a course outline, and grading informat
 6. **Due Midnight PST on TBD** - Problem Set 3 <!--  [Problem Set 3](/problem_sets/problem_set_3.ipynb) -->
 7. **Due Midnight PST on TBD** -  Problem Set 4 <!-- [Problem Set 4](/problem_sets/problem_set_4.ipynb) -->
 8. **Due Midnight PST on TBD** -  Problem Set 5 <!-- [Problem Set 5](/problem_sets/problem_set_5.ipynb) -->
-9. **Due Midnight PST on TBD** -  Problem Set 6 <!-- [Problem Set 6](/problem_sets/problem_set_6.ipynb) -->
+9.  **Due Midnight PST on TBD** -  Problem Set 6 <!-- [Problem Set 6](/problem_sets/problem_set_6.ipynb) -->
 10. **Reviewing TBD** - Final Practice Problems <!-- [Final Practice Problems](/problem_sets/final_practice_problems.ipynb) -->
 
 All problem set solutions should be submitted on Canvas directly as a `.ipynb` file with instructions embedded.
