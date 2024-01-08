@@ -8,7 +8,7 @@ See [here](syllabus.md) for more details, a course outline, and grading informat
 
 ## Problem Sets and Exams
 
-1. **Due Midnight PST on January 14th** - Problem Set 0. This is a pass/fail problem set (i.e., hand it in you pass!) just to ensure you have setup your computer properly  <!-- [Problem Set 0](/problem_sets/problem_set_0.ipynb) -->
+1. **Due Midnight PST on January 14th** - Problem Set 0. This is a pass/fail problem set (i.e., hand it in you pass!) just to ensure you have setup your computer properly  [Problem Set 0](/problem_sets/problem_set_0.ipynb)
 2. **Due Midnight PST on TBD** - Problem Set 1 <!-- [Problem Set 1](/problem_sets/problem_set_1.ipynb) -->
 3. **Due Midnight PST on TBD** - Problem Set 2 <!-- [Problem Set 2](/problem_sets/problem_set_2.ipynb) -->
 4. **Reviewing around February 14th** - Midterm Practice Problems  <!--[Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb) -->
@@ -23,16 +23,23 @@ All problem set solutions should be submitted on Canvas directly as a `.ipynb` f
 
 
 ## Lectures
-The first few weeks will introduce Julia, and then we will move on to the core topics of the course which will be a combination of theory and computational examples.
-1. **January 8th** - Introduction, course overview, VSCode and [Julia Overview](https://julia.quantecon.org/getting_started_julia/getting_started.html) and [Introductory Examples](https://julia.quantecon.org/getting_started_julia/julia_by_example.html)
-2. **January 10th** - [Introductory examples/fixed point problems](https://julia.quantecon.org/getting_started_julia/julia_by_example.html) including examples from linear-asset pricing
+See [here](https://jlperla.github.io/ECON408/index.html) for links to all materials.
+
+1. **January 8th** - Introduction, course overview, VSCode Intro to Julia
+   - **Lecture Notes**: [Course Overview and Computational Environment](https://jlperla.github.io/ECON408/lectures/intro.html)
+   - **References**:
+     -  [Julia Overview](https://julia.quantecon.org/getting_started_julia/getting_started.html)
+     -  Subset of [Julia by Example](https://julia.quantecon.org/getting_started_julia/julia_by_example.html)
+     -  [Essentials](https://julia.quantecon.org/julia_essentials.html)
+     -  [Fundamental Types](https://julia.quantecon.org/getting_started_julia/fundamental_types.html)
+2. **January 10th** - Variations on Fixed Points
 3. **January 15th** - 
 4. **January 17th** - 
 5. **January 22nd** - 
 6. **January 24th** - 
 7. **January 29th** - 
 8. **January 31st** - 
-9. **February 5th** - 
+9.  **February 5th** - 
 10. **February 7th** - 
 11. **February 12th** - 
 12. **February 14th** - Possible Midterm
@@ -58,12 +65,3 @@ The first few weeks will introduce Julia, and then we will move on to the core t
 For the computational environment, it is strongly suggested to install [VS Code](https://code.visualstudio.com/) as well as Jupyter.  Familiarity with those tools will make it easier for future work in industry or as research assistants.  See [here](https://julia.quantecon.org/getting_started_julia/getting_started.html) to setup your environment.
 
 While we will be using a computer for simulations and numerical solutions to our models, this is an economics course.  If you have the prerequisites, then **do not be scared off by the programming requirements!**  Relative to many classes, the coding will be kept simple.  The hard part will be the economic and finance theory.
-
-This course is being taught with [Julia](https://julialang.org/), and you will be expected to use that language.  Writing your code in Matlab or Python is not possible (and R is inappropriate for this sort of material).  
-
-### Programming Language
-If you are scared that you don't know Julia, don't worry: **the first programming language is the hardest and it Julia will come easily if you have the prerequisities** (i.e. a course using Matlab or Python, sadly R is not sufficient preparation).
-
-There are good reasons to learn at least two programming languages regardless of which ones they are:  it makes you better at both, and easier to pickup a third - even if you only end up using Python in the longrun.  Most important, on CVs when applying for jobs everyone already says they know Python, so it becomes a major differentiator to be able to say you know other serious computational languages - and Julia is as good as any for that purpose.
-
-Julia itself has some advantages in economics and finance: (1) while Python is great for datascience and machine learning, it is harder and verbose to use for simulations and computational methods than it first appears; (2) Julia is much more natural for programming mathematics and linear algebra than Python and closer to Matlab; (3) many research economists and finance research use Julia for computational methods, so it helps you to work as as RA or to get a job as a predoc.

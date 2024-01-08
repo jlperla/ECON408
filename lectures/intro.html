@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.450">
+
+  <meta name="author" content="Jesse Perla">
+  <title>ECON 408 Computational Methods in Macroeconomics - ECON408: Computational Methods in Macroeconomics</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+  <style>
+  .reveal .custom3070 > div.column:first-child {
+    width: 30%;
+  }
+  .reveal .custom3070 div.column:not(:first-child) {
+    width: 70%;
+  }
+  .reveal .custom4060 > div.column:first-child {
+    width: 40%;
+  }
+  .reveal .custom4060 div.column:not(:first-child) {
+    width: 60%;
+  }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">ECON408: Computational Methods in Macroeconomics</h1>
+  <p class="subtitle">Course Overview and Computational Environment</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Jesse Perla 
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:jesse.perla@ubc.ca">jesse.perla@ubc.ca</a>
+</div>
+        <p class="quarto-title-affiliation">
+            University of British Columbia
+          </p>
+    </div>
+</div>
+
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#/course-overview-and-objectives" id="/toc-course-overview-and-objectives">Course Overview and Objectives</a></li>
+<li><a href="#/programming-languages" id="/toc-programming-languages">Programming Languages</a></li>
+<li><a href="#/quantitative-empirical-and-theoretical-economics" id="/toc-quantitative-empirical-and-theoretical-economics">Quantitative, Empirical, and Theoretical Economics</a></li>
+<li><a href="#/computational-environment" id="/toc-computational-environment">Computational Environment</a></li>
+<li><a href="#/crash-course-on-julia" id="/toc-crash-course-on-julia">Crash Course on Julia</a></li>
+</ul>
+</nav>
+</section>
+<section>
+<section id="course-overview-and-objectives" class="title-slide slide level1 center">
+<h1>Course Overview and Objectives</h1>
+
+</section>
+<section id="course-structure-and-prerequisites" class="slide level2">
+<h2>Course Structure and Prerequisites</h2>
+<ul>
+<li>“Macroconomics on a computer”. Mostly macro-finance and macro-labor
+<ul>
+<li>Not an intro to programming course or stats/econometrics class</li>
+<li>Less programming than ECON323, more math and theory</li>
+</ul></li>
+<li>Build experience with computational tools and structural models in macroeconomics which can help you conduct “counterfactuals”
+<ul>
+<li>Not much data or empirics</li>
+<li>Complement to other courses focusing on “field” topics, empirics, estimation, inference, datascience, etc.</li>
+</ul></li>
+</ul>
+</section>
+<section id="prerequisites" class="slide level2">
+<h2>Prerequisites</h2>
+<ul>
+<li>You need to have
+<ul>
+<li>One of ECON 301, ECON 304, ECON 308</li>
+<li>One of ECON 323, CPSC 103, CPSC 110, MATH 210, COMM 337</li>
+<li>One of MATH 221, MATH 223.</li>
+</ul></li>
+<li><strong>Not negotiable</strong> to have intermediate micro (i.e., macro optional)</li>
+<li><strong>Not negotiable</strong> to have the formal programming class in some general purpose language (e.g., Stata and R don’t count, self-study isn’t enough)</li>
+<li>Math requirement you can talk to me, especially if you took ECON307 or have significant background in linear algebra and multivariate calculus</li>
+</ul>
+</section>
+<section id="assessments" class="slide level2">
+<h2>Assessments</h2>
+<ul>
+<li>Grading:
+<ul>
+<li>6-8 problem sets: 20% (total)</li>
+<li>Midterm exam: 30%</li>
+<li>Final exam: 50%</li>
+</ul></li>
+<li>Midterm and final examinations will be done in a computer lab or on your own computer in class. Not testing programming skills</li>
+<li>Problem sets will start off short and easy to help those with less programming experience, and then build in (economics) complexity.</li>
+<li><strong>See syllabus</strong> for missed exam policies</li>
+</ul>
+</section></section>
+<section>
+<section id="programming-languages" class="title-slide slide level1 center">
+<h1>Programming Languages</h1>
+
+</section>
+<section id="which-language" class="slide level2">
+<h2>Which Language?</h2>
+<ul>
+<li>Plenty of great languages used in economics and finance: Matlab, Python, Julia, Fortran, C++, Stata, Dynare, R, Stan…
+<ul>
+<li>All are great for some things, and terrible for others</li>
+<li>Some are highly specialized and less general purpose than others (e.g.&nbsp;Stata and R)</li>
+</ul></li>
+<li>I love specialized languages! But…
+<ul>
+<li>My philosophy is you will need to learn <strong>at least</strong> two general purpose programming languages over your career.</li>
+</ul></li>
+</ul>
+</section>
+<section id="benefits-of-learning-more-languages" class="slide level2">
+<h2>Benefits of Learning more Languages</h2>
+<p>Plan for your longrun career, languages come and go…</p>
+<ul>
+<li>The 2nd language makes you a better programmer at both</li>
+<li>The 3rd is even easier as you learn similarities and differences</li>
+<li>Grad School/job applications everyone says they know Python
+<ul>
+<li>Differentiator to credibly claim you know another serious language</li>
+<li>Increasingly important to <strong>signal</strong> computational sophistication to get jobs</li>
+<li>Julia is as good as any for that purpose</li>
+</ul></li>
+</ul>
+</section>
+<section id="advantages-of-learning-julia-for-economics-and-finance" class="slide level2">
+<h2>Advantages of Learning Julia for Economics and Finance</h2>
+<ul>
+<li>Python is great for datascience and ML, but “ugly”, verbose, and slow to use directly for many simulations and computational methods
+<ul>
+<li>Python wrappers for high-performance code used in ML are great</li>
+<li>But when an appropriate framework doesn’t exist, writing fast code yourself in Python is much harder than in Julia</li>
+<li>Performance in Python usually means C++ or frameworks like JAX</li>
+</ul></li>
+<li>Julia (and Matlab) is more natural for programming mathematics than Python. Easier to learn than alternative Python packages.</li>
+<li>Many in economists and finance research use Julia for computational methods, so it helps you to work as as RA or to get a job as a predoc</li>
+</ul>
+</section>
+<section id="dont-worry-if-you-are-new-to-programming" class="slide level2">
+<h2>Don’t Worry If You are New to Programming</h2>
+<ul>
+<li>Costs of learning languages has decreasing returns to scale
+<ul>
+<li>Learning the <strong>first programming language is the hardest</strong></li>
+</ul></li>
+<li>Julia will come easily if you have the prerequisities (i.e.&nbsp;a course using Matlab or Python, sadly R is not sufficient preparation)</li>
+<li>Submitting your code in Matlab or Python is not possible given the course structure and infrastructure</li>
+</ul>
+</section></section>
+<section>
+<section id="quantitative-empirical-and-theoretical-economics" class="title-slide slide level1 center">
+<h1>Quantitative, Empirical, and Theoretical Economics</h1>
+
+</section>
+<section id="why-isnt-big-data-mlstatistics-enough" class="slide level2">
+<h2>Why Isn’t Big Data ML/Statistics Enough?</h2>
+<ul>
+<li>Going well before the big data/ML revolution economists asked whether they could just use statistical models with enough data
+<ul>
+<li>Answer: only if you had the right (statistical) model for a particular experiment, but historical data doesn’t have variation in crucial directions</li>
+<li>The right “statistical model” would need to reflect that humans adapt and make forecasts - responding to policy and incentives</li>
+<li>Especially difficult in macro because of dynamics and GE effects</li>
+<li>Cowles Commision, Lucas Critique, Policy Ineffectiveness Proposition (Sargent and Wallace), Time Inconsistency (Kydland and Prescott)</li>
+</ul></li>
+<li>Having more data and fancier statistics doesn’t solve these problems</li>
+</ul>
+</section>
+<section id="forecasts-and-distributions" class="slide level2">
+<h2>Forecasts and Distributions</h2>
+<ul>
+<li>Summary: conducting experiments with a data generating process (DGP) is fine, but how to find the right one <strong>for a given problem</strong>?<br>
+</li>
+<li>Think probabilistically: the world is a joint distribution of observables, unobservables (i.e., latent variables), shocks, and parameters</li>
+<li>Joint distributions let you calculate conditional expectations and conduct “experiments” by conditioning on different events</li>
+<li>Statistics and machine learning is often criticized as being only about “prediction” and sometimes “inference”
+<ul>
+<li>This isn’t quite true, but lets us ask what prediction really means</li>
+</ul></li>
+</ul>
+</section>
+<section id="counterfactuals-what-if" class="slide level2">
+<h2>Counterfactuals: “What If?”</h2>
+<ul>
+<li>Most interesting problems in economics are about counterfactuals
+<ul>
+<li>What would unemployment have been if the government had not intervened during the recession?</li>
+<li>What would have been her income if she had not gone to college, or if she wasn’t subjected to gender bias?</li>
+</ul></li>
+<li>By definition these are not observable. If we had the data already we wouldn’t need to ponder these “What if?”</li>
+<li>How can you answer a question with data that doesn’t exist?</li>
+</ul>
+<center>
+<strong>YOU HAVE TO MAKE SOMETHING UP</strong>
+</center>
+</section>
+<section id="the-role-of-theory" class="slide level2">
+<h2>The Role of Theory</h2>
+<ul>
+<li>There is no data interpretation without some theory - even if it is sometimes implicit. Interpreting empirical results require self-reflection</li>
+<li>The role of both data and theory is then to help constrain the set of possible counterfactuals for the “what if?”</li>
+<li>So any criticisms of ML or statistics as “merely prediction” are basically a statement on whether the theory makes sense
+<ul>
+<li>i.e., if you fit <span class="math inline">\(y = f(X) + \epsilon\)</span> on data to find a <span class="math inline">\(\hat{f}(X)\)</span> function, then theory tells you if you made the right assumptions (e.g., that the <span class="math inline">\(X\)</span> data is representative and wouldn’t change for your counterfactual of interest, etc)</li>
+</ul></li>
+</ul>
+</section>
+<section id="approach-in-this-course" class="slide level2">
+<h2>Approach in this Course</h2>
+<ul>
+<li>Always remember: you need assumptions in one form or another because the counterfactuals are inherently not in the data</li>
+<li>Broadly there are three approaches to conducting counterfactuals. They are not mutually exclusive
+<ol type="1">
+<li>Structural models emphasize theory as structure on the joint distribution</li>
+<li>Causal inference using matching, instrumental variables, etc. which use theoretical assumptions on independence to adjust for bias and missing unobservable (latent) variables</li>
+<li>Randomized Experiments/Treatment Effects where you can get good data which truly randomizes some sort of “treatment”.</li>
+</ol></li>
+<li>In this course we will focus on <strong>simulations and structural models</strong> - sometimes called “quantitative economics”</li>
+</ul>
+</section>
+<section id="macroeconomic-models-require-lots-of-tools" class="slide level2">
+<h2>Macroeconomic Models Require Lots of Tools</h2>
+<ul>
+<li>Conducting macroeconomic counterfactuals requires a lot of tools because
+<ul>
+<li>Macroeconomic decisions are dynamic and often stochastic</li>
+<li>Agents are forward looking</li>
+<li>Agents interact through markets and prices, which creates “general equilibrium” effects (i.e., which are inherently nonlinear)</li>
+<li>Heterogeneity leads to the distributional being crucial</li>
+<li>Agent’s may respond to policies by thinking through the dynamic effects</li>
+</ul></li>
+<li>We formalize these assumptions with math, but we are rarely able to solve them analytically. Use a computer!</li>
+</ul>
+</section>
+<section id="tools-topics" class="slide level2">
+<h2>Tools Topics</h2>
+<p>See Syllabus for more details</p>
+<ol type="1">
+<li>Linear algebra and basic scientific computing</li>
+<li>Geometric Series and Discrete Time Dynamics</li>
+<li>Basic Stochastic Processes</li>
+<li>Linear State Space Models</li>
+<li>Markov Chains</li>
+<li>Dynamic Programming</li>
+</ol>
+</section>
+<section id="applications-topics" class="slide level2">
+<h2>Applications Topics</h2>
+<p>The tools are interleaved with applications such as</p>
+<ol type="1">
+<li>Marginal Propensity to Consume</li>
+<li>Dynamics of Wealth and Distributions</li>
+<li>Permanent Income Model</li>
+<li>Models of Unemployment</li>
+<li>Asset Pricing</li>
+<li>Lucas Trees and No-arbitrage Option Pricing</li>
+<li>Recursive Equilibria and the McCall Search Model</li>
+<li>Time permitting: Rational Expectations and Firm Equilibria, Growth Models</li>
+</ol>
+</section></section>
+<section>
+<section id="computational-environment" class="title-slide slide level1 center">
+<h1>Computational Environment</h1>
+
+</section>
+<section id="setup" class="slide level2">
+<h2>Setup</h2>
+<ul>
+<li>You can install Julia on your laptop by following <a href="https://julia.quantecon.org/getting_started_julia/getting_started.html">these instructions</a></li>
+<li>While one can use Julia entirely from just Jupyter notebooks, we will also introduce basic <a href="https://github.com/">GitHub</a> and <a href="https://code.visualstudio.com/">VS Code</a> usage as well to help broaden your exposure to computational tools.</li>
+<li>So my suggestion is to challenge yourself to learn VS Code, GitHub, and other tools. Further <strong>signalling</strong> for RA/predoc/etc. jobs</li>
+</ul>
+</section>
+<section id="summary-of-installation" class="slide level2">
+<h2>Summary of Installation</h2>
+<ol type="1">
+<li>Install <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/">Git</a></li>
+<li>Install <a href="https://www.anaconda.com/download">Anaconda</a></li>
+<li>Install Julia with <a href="https://github.com/JuliaLang/juliaup#installation">juliaup</a>
+<ul>
+<li>Windows: easiest method is <code>winget install julia -s msstore</code> in a Windows terminal</li>
+<li>Linux/Mac: in a terminal use <code>curl -fsSL https://install.julialang.org | sh</code></li>
+</ul></li>
+<li>Install <a href="https://code.visualstudio.com/">Visual Studio Code (VS Code)</a></li>
+<li>Install the <a href="https://marketplace.visualstudio.com/items?itemName=julialang.language-julia">VS Code Julia</a> extension</li>
+</ol>
+</section>
+<section id="install-packages" class="slide level2">
+<h2>Install Packages</h2>
+<ol type="1">
+<li><p>Open the command palette with <code>&lt;Ctrl+Shift+P&gt;</code> or <code>&lt;Cmd+Shift+P&gt;</code> on mac and type <code>&gt; Git: Clone</code> and choose <code>https://github.com/quantecon/lecture-julia.notebooks</code></p></li>
+<li><p>Instantiate packages, in VSCode or</p>
+<ul>
+<li>Run a terminal in that directory</li>
+<li>Then <code>julia</code> and <code>]</code> enters package mode</li>
+<li><code>] add IJulia</code>, which adds to global environment</li>
+<li><code>] activate</code>, which chooses the <code>Project.toml</code> file</li>
+<li><code>] instantiate</code></li>
+</ul></li>
+<li><p>Then use VS Code or <code>jupyter lab</code> to open</p></li>
+</ol>
+</section>
+<section id="julia-environment-basics" class="slide level2">
+<h2>Julia Environment Basics</h2>
+<ul>
+<li>Project files keep track of dependencies and make things reproducible
+<ul>
+<li>Similar to Python’s virtual environments but easier to use</li>
+</ul></li>
+<li>VS Code and Jupyter will automatically activate a <code>Project.toml</code>
+<ul>
+<li>In REPL or Jupyter enter <code>]</code> for managing packages</li>
+<li>Can manually activate with <code>] activate</code> or <code>] activate path/to/project</code></li>
+<li>On commandline, can use <code>julia --project</code></li>
+<li>If a file doesn’t exist, then <code>]activate</code> creates one for the folder</li>
+</ul></li>
+<li>With activated project, use <code>] instantiate</code> to install all the packages</li>
+<li>For this course: no package management required after instantiation</li>
+</ul>
+</section>
+<section id="reproducibility" class="slide level2">
+<h2>Reproducibility</h2>
+<ul>
+<li><strong>ALWAYS</strong> use a <code>Project.toml</code> file
+<ul>
+<li>Keep your global environment as clean</li>
+<li>Enough to do <code>] add IJulia</code></li>
+</ul></li>
+<li>Associated with <code>Project.toml</code> is a <code>Manifest.toml</code> file which establishes the exact versions for reproducibility
+<ul>
+<li><code>] instantiate</code> will install the exact versions</li>
+<li>Less important for us, but very useful for reproducibility in research to distribute with project</li>
+</ul></li>
+</ul>
+</section>
+<section id="instantiate-this-repo" class="slide level2">
+<h2>Instantiate This Repo</h2>
+<ul>
+<li>Ensure you have cloned this repo, <code>https://github.com/jlperla/ECON408</code>
+<ul>
+<li>Use VS Code or <code>git clone</code></li>
+</ul></li>
+<li>If you previously installed the <code>lecture-julia.notebooks</code> repo you won’t need to do <code>] instantiate</code> again</li>
+<li>Access all lectures as <code>.ipynb</code> in the <code>/lectures</code> directory</li>
+</ul>
+</section></section>
+<section>
+<section id="crash-course-on-julia" class="title-slide slide level1 center">
+<h1>Crash Course on Julia</h1>
+
+</section>
+<section id="introductory-lectures" class="slide level2">
+<h2>Introductory Lectures</h2>
+<ul>
+<li>Assuming you are familiar with Matlab or Python, Julia will be easy to learn</li>
+<li>See QuantEcon lectures
+<ul>
+<li><a href="https://julia.quantecon.org/getting_started_julia/julia_by_example.html">Julia by Example</a></li>
+<li><a href="https://julia.quantecon.org/julia_essentials.html">Essentials</a></li>
+<li><a href="https://julia.quantecon.org/getting_started_julia/fundamental_types.html">Fundamental Types</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="using-packages" class="slide level2">
+<h2>Using Packages</h2>
+<ul>
+<li>First ensure your project is activated and packages instantiated</li>
+</ul>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">using</span> <span class="bu">LinearAlgebra</span>, <span class="bu">Statistics</span>, <span class="bu">Plots</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="plotting-random-numbers" class="slide level2">
+<h2>Plotting Random Numbers</h2>
+<div class="cell columns column-output-location" data-execution_count="3">
+<div class="column">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1"></a>n <span class="op">=</span> <span class="fl">100</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>ep <span class="op">=</span> <span class="fu">randn</span>(n)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span>n, ep)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-display" data-execution_count="3">
+<!--?xml version="1.0" encoding="utf-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="960" height="480" viewbox="0 0 3840 1920">
+<defs>
+  <clippath id="clip650">
+    <rect x="0" y="0" width="3840" height="1920"></rect>
+  </clippath>
+</defs>
+<path clip-path="url(#clip650)" d="M0 1920 L3840 1920 L3840 0 L0 0  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<defs>
+  <clippath id="clip651">
+    <rect x="768" y="0" width="2689" height="1920"></rect>
+  </clippath>
+</defs>
+<path clip-path="url(#clip650)" d="M161.878 1811.89 L3792.76 1811.89 L3792.76 47.2441 L161.878 47.2441  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<defs>
+  <clippath id="clip652">
+    <rect x="161" y="47" width="3632" height="1766"></rect>
+  </clippath>
+</defs>
+<polyline clip-path="url(#clip652)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="230.039,1811.89 230.039,47.2441 "></polyline>
+<polyline clip-path="url(#clip652)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1095.03,1811.89 1095.03,47.2441 "></polyline>
+<polyline clip-path="url(#clip652)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1960.02,1811.89 1960.02,47.2441 "></polyline>
+<polyline clip-path="url(#clip652)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="2825.01,1811.89 2825.01,47.2441 "></polyline>
+<polyline clip-path="url(#clip652)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="3690,1811.89 3690,47.2441 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="161.878,1811.89 3792.76,1811.89 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="230.039,1811.89 230.039,1792.99 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1095.03,1811.89 1095.03,1792.99 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1960.02,1811.89 1960.02,1792.99 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2825.01,1811.89 2825.01,1792.99 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="3690,1811.89 3690,1792.99 "></polyline>
+<path clip-path="url(#clip650)" d="M230.039 1854.33 Q226.428 1854.33 224.599 1857.89 Q222.794 1861.43 222.794 1868.56 Q222.794 1875.67 224.599 1879.23 Q226.428 1882.78 230.039 1882.78 Q233.673 1882.78 235.479 1879.23 Q237.308 1875.67 237.308 1868.56 Q237.308 1861.43 235.479 1857.89 Q233.673 1854.33 230.039 1854.33 M230.039 1850.62 Q235.849 1850.62 238.905 1855.23 Q241.983 1859.81 241.983 1868.56 Q241.983 1877.29 238.905 1881.9 Q235.849 1886.48 230.039 1886.48 Q224.229 1886.48 221.15 1881.9 Q218.095 1877.29 218.095 1868.56 Q218.095 1859.81 221.15 1855.23 Q224.229 1850.62 230.039 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M1074.3 1881.87 L1090.62 1881.87 L1090.62 1885.81 L1068.67 1885.81 L1068.67 1881.87 Q1071.34 1879.12 1075.92 1874.49 Q1080.53 1869.84 1081.71 1868.49 Q1083.95 1865.97 1084.83 1864.23 Q1085.73 1862.47 1085.73 1860.78 Q1085.73 1858.03 1083.79 1856.29 Q1081.87 1854.56 1078.77 1854.56 Q1076.57 1854.56 1074.11 1855.32 Q1071.68 1856.09 1068.91 1857.64 L1068.91 1852.91 Q1071.73 1851.78 1074.18 1851.2 Q1076.64 1850.62 1078.67 1850.62 Q1084.04 1850.62 1087.24 1853.31 Q1090.43 1855.99 1090.43 1860.48 Q1090.43 1862.61 1089.62 1864.53 Q1088.84 1866.43 1086.73 1869.03 Q1086.15 1869.7 1083.05 1872.91 Q1079.95 1876.11 1074.3 1881.87 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M1100.48 1851.25 L1118.84 1851.25 L1118.84 1855.18 L1104.76 1855.18 L1104.76 1863.66 Q1105.78 1863.31 1106.8 1863.15 Q1107.82 1862.96 1108.84 1862.96 Q1114.62 1862.96 1118 1866.13 Q1121.38 1869.3 1121.38 1874.72 Q1121.38 1880.3 1117.91 1883.4 Q1114.44 1886.48 1108.12 1886.48 Q1105.94 1886.48 1103.67 1886.11 Q1101.43 1885.74 1099.02 1885 L1099.02 1880.3 Q1101.1 1881.43 1103.33 1881.99 Q1105.55 1882.54 1108.03 1882.54 Q1112.03 1882.54 1114.37 1880.44 Q1116.71 1878.33 1116.71 1874.72 Q1116.71 1871.11 1114.37 1869 Q1112.03 1866.9 1108.03 1866.9 Q1106.15 1866.9 1104.28 1867.31 Q1102.42 1867.73 1100.48 1868.61 L1100.48 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M1934.72 1851.25 L1953.07 1851.25 L1953.07 1855.18 L1939 1855.18 L1939 1863.66 Q1940.02 1863.31 1941.04 1863.15 Q1942.05 1862.96 1943.07 1862.96 Q1948.86 1862.96 1952.24 1866.13 Q1955.62 1869.3 1955.62 1874.72 Q1955.62 1880.3 1952.15 1883.4 Q1948.67 1886.48 1942.36 1886.48 Q1940.18 1886.48 1937.91 1886.11 Q1935.67 1885.74 1933.26 1885 L1933.26 1880.3 Q1935.34 1881.43 1937.56 1881.99 Q1939.79 1882.54 1942.26 1882.54 Q1946.27 1882.54 1948.61 1880.44 Q1950.94 1878.33 1950.94 1874.72 Q1950.94 1871.11 1948.61 1869 Q1946.27 1866.9 1942.26 1866.9 Q1940.39 1866.9 1938.51 1867.31 Q1936.66 1867.73 1934.72 1868.61 L1934.72 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M1974.83 1854.33 Q1971.22 1854.33 1969.39 1857.89 Q1967.59 1861.43 1967.59 1868.56 Q1967.59 1875.67 1969.39 1879.23 Q1971.22 1882.78 1974.83 1882.78 Q1978.47 1882.78 1980.27 1879.23 Q1982.1 1875.67 1982.1 1868.56 Q1982.1 1861.43 1980.27 1857.89 Q1978.47 1854.33 1974.83 1854.33 M1974.83 1850.62 Q1980.64 1850.62 1983.7 1855.23 Q1986.78 1859.81 1986.78 1868.56 Q1986.78 1877.29 1983.7 1881.9 Q1980.64 1886.48 1974.83 1886.48 Q1969.02 1886.48 1965.94 1881.9 Q1962.89 1877.29 1962.89 1868.56 Q1962.89 1859.81 1965.94 1855.23 Q1969.02 1850.62 1974.83 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M2798.86 1851.25 L2821.08 1851.25 L2821.08 1853.24 L2808.54 1885.81 L2803.65 1885.81 L2815.46 1855.18 L2798.86 1855.18 L2798.86 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M2830.25 1851.25 L2848.61 1851.25 L2848.61 1855.18 L2834.53 1855.18 L2834.53 1863.66 Q2835.55 1863.31 2836.57 1863.15 Q2837.59 1862.96 2838.61 1862.96 Q2844.39 1862.96 2847.77 1866.13 Q2851.15 1869.3 2851.15 1874.72 Q2851.15 1880.3 2847.68 1883.4 Q2844.21 1886.48 2837.89 1886.48 Q2835.71 1886.48 2833.44 1886.11 Q2831.2 1885.74 2828.79 1885 L2828.79 1880.3 Q2830.87 1881.43 2833.1 1881.99 Q2835.32 1882.54 2837.8 1882.54 Q2841.8 1882.54 2844.14 1880.44 Q2846.48 1878.33 2846.48 1874.72 Q2846.48 1871.11 2844.14 1869 Q2841.8 1866.9 2837.8 1866.9 Q2835.92 1866.9 2834.05 1867.31 Q2832.19 1867.73 2830.25 1868.61 L2830.25 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M3649.6 1881.87 L3657.24 1881.87 L3657.24 1855.51 L3648.93 1857.17 L3648.93 1852.91 L3657.19 1851.25 L3661.87 1851.25 L3661.87 1881.87 L3669.51 1881.87 L3669.51 1885.81 L3649.6 1885.81 L3649.6 1881.87 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M3688.95 1854.33 Q3685.34 1854.33 3683.51 1857.89 Q3681.71 1861.43 3681.71 1868.56 Q3681.71 1875.67 3683.51 1879.23 Q3685.34 1882.78 3688.95 1882.78 Q3692.59 1882.78 3694.39 1879.23 Q3696.22 1875.67 3696.22 1868.56 Q3696.22 1861.43 3694.39 1857.89 Q3692.59 1854.33 3688.95 1854.33 M3688.95 1850.62 Q3694.76 1850.62 3697.82 1855.23 Q3700.9 1859.81 3700.9 1868.56 Q3700.9 1877.29 3697.82 1881.9 Q3694.76 1886.48 3688.95 1886.48 Q3683.14 1886.48 3680.06 1881.9 Q3677.01 1877.29 3677.01 1868.56 Q3677.01 1859.81 3680.06 1855.23 Q3683.14 1850.62 3688.95 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M3719.12 1854.33 Q3715.5 1854.33 3713.68 1857.89 Q3711.87 1861.43 3711.87 1868.56 Q3711.87 1875.67 3713.68 1879.23 Q3715.5 1882.78 3719.12 1882.78 Q3722.75 1882.78 3724.56 1879.23 Q3726.38 1875.67 3726.38 1868.56 Q3726.38 1861.43 3724.56 1857.89 Q3722.75 1854.33 3719.12 1854.33 M3719.12 1850.62 Q3724.93 1850.62 3727.98 1855.23 Q3731.06 1859.81 3731.06 1868.56 Q3731.06 1877.29 3727.98 1881.9 Q3724.93 1886.48 3719.12 1886.48 Q3713.31 1886.48 3710.23 1881.9 Q3707.17 1877.29 3707.17 1868.56 Q3707.17 1859.81 3710.23 1855.23 Q3713.31 1850.62 3719.12 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><polyline clip-path="url(#clip652)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="161.878,1637.49 3792.76,1637.49 "></polyline>
+<polyline clip-path="url(#clip652)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="161.878,1318.83 3792.76,1318.83 "></polyline>
+<polyline clip-path="url(#clip652)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="161.878,1000.16 3792.76,1000.16 "></polyline>
+<polyline clip-path="url(#clip652)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="161.878,681.498 3792.76,681.498 "></polyline>
+<polyline clip-path="url(#clip652)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="161.878,362.833 3792.76,362.833 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="161.878,1811.89 161.878,47.2441 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="161.878,1637.49 180.776,1637.49 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="161.878,1318.83 180.776,1318.83 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="161.878,1000.16 180.776,1000.16 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="161.878,681.498 180.776,681.498 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="161.878,362.833 180.776,362.833 "></polyline>
+<path clip-path="url(#clip650)" d="M44.1625 1637.95 L73.8383 1637.95 L73.8383 1641.88 L44.1625 1641.88 L44.1625 1637.95 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M87.9586 1650.84 L104.278 1650.84 L104.278 1654.77 L82.3336 1654.77 L82.3336 1650.84 Q84.9956 1648.08 89.5789 1643.46 Q94.1854 1638.8 95.3659 1637.46 Q97.6113 1634.94 98.4909 1633.2 Q99.3937 1631.44 99.3937 1629.75 Q99.3937 1627 97.4492 1625.26 Q95.528 1623.52 92.4261 1623.52 Q90.2271 1623.52 87.7734 1624.29 Q85.3428 1625.05 82.5651 1626.6 L82.5651 1621.88 Q85.3891 1620.75 87.8428 1620.17 Q90.2965 1619.59 92.3335 1619.59 Q97.7039 1619.59 100.898 1622.27 Q104.093 1624.96 104.093 1629.45 Q104.093 1631.58 103.283 1633.5 Q102.496 1635.4 100.389 1637.99 Q99.8103 1638.66 96.7085 1641.88 Q93.6067 1645.08 87.9586 1650.84 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M43.7921 1319.28 L73.4679 1319.28 L73.4679 1323.22 L43.7921 1323.22 L43.7921 1319.28 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M84.3706 1332.17 L92.0095 1332.17 L92.0095 1305.81 L83.6993 1307.48 L83.6993 1303.22 L91.9632 1301.55 L96.6391 1301.55 L96.6391 1332.17 L104.278 1332.17 L104.278 1336.11 L84.3706 1336.11 L84.3706 1332.17 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M92.3335 985.962 Q88.7224 985.962 86.8937 989.527 Q85.0882 993.069 85.0882 1000.2 Q85.0882 1007.3 86.8937 1010.87 Q88.7224 1014.41 92.3335 1014.41 Q95.9678 1014.41 97.7733 1010.87 Q99.602 1007.3 99.602 1000.2 Q99.602 993.069 97.7733 989.527 Q95.9678 985.962 92.3335 985.962 M92.3335 982.259 Q98.1437 982.259 101.199 986.865 Q104.278 991.448 104.278 1000.2 Q104.278 1008.93 101.199 1013.53 Q98.1437 1018.11 92.3335 1018.11 Q86.5234 1018.11 83.4447 1013.53 Q80.3892 1008.93 80.3892 1000.2 Q80.3892 991.448 83.4447 986.865 Q86.5234 982.259 92.3335 982.259 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M84.3706 694.843 L92.0095 694.843 L92.0095 668.477 L83.6993 670.144 L83.6993 665.885 L91.9632 664.218 L96.6391 664.218 L96.6391 694.843 L104.278 694.843 L104.278 698.778 L84.3706 698.778 L84.3706 694.843 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M87.9586 376.177 L104.278 376.177 L104.278 380.113 L82.3336 380.113 L82.3336 376.177 Q84.9956 373.423 89.5789 368.793 Q94.1854 364.14 95.3659 362.798 Q97.6113 360.275 98.4909 358.539 Q99.3937 356.779 99.3937 355.09 Q99.3937 352.335 97.4492 350.599 Q95.528 348.863 92.4261 348.863 Q90.2271 348.863 87.7734 349.627 Q85.3428 350.39 82.5651 351.941 L82.5651 347.219 Q85.3891 346.085 87.8428 345.506 Q90.2965 344.928 92.3335 344.928 Q97.7039 344.928 100.898 347.613 Q104.093 350.298 104.093 354.789 Q104.093 356.918 103.283 358.839 Q102.496 360.738 100.389 363.33 Q99.8103 364.002 96.7085 367.219 Q93.6067 370.414 87.9586 376.177 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><polyline clip-path="url(#clip652)" style="stroke:#009af9; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="264.639,1155.07 299.238,792.96 333.838,529.152 368.437,854.537 403.037,815.782 437.636,759.61 472.236,1017.6 506.836,1130.77 541.435,1253.37 576.035,1179.19 610.634,768.717 645.234,1155.41 679.833,834.656 714.433,1085.2 749.032,1046.79 783.632,759.2 818.232,1159.81 852.831,280.336 887.431,790.536 922.03,972.352 956.63,1042.69 991.229,633.333 1025.83,468.055 1060.43,1126 1095.03,1413.88 1129.63,1059.57 1164.23,1362.38 1198.83,912.918 1233.43,745.299 1268.03,1130.66 1302.63,1124.62 1337.23,616.979 1371.82,1114.06 1406.42,899.258 1441.02,810.605 1475.62,1504.39 1510.22,910.694 1544.82,792.55 1579.42,1010.85 1614.02,910.308 1648.62,1103.6 1683.22,1761.95 1717.82,1075.68 1752.42,1496.74 1787.02,767.564 1821.62,1011.77 1856.22,1376.26 1890.82,462.158 1925.42,906.611 1960.02,1053.82 1994.62,1167.17 2029.22,1010.77 2063.82,1082.38 2098.42,706.775 2133.01,1008.5 2167.61,667.836 2202.21,463.925 2236.81,278.945 2271.41,711.954 2306.01,907.936 2340.61,921.916 2375.21,1154.11 2409.81,557.8 2444.41,1181.14 2479.01,803.635 2513.61,1224.06 2548.21,1121.34 2582.81,1000.67 2617.41,949.629 2652.01,661.401 2686.61,1283.25 2721.21,619.31 2755.81,780.996 2790.41,97.1868 2825.01,1012.64 2859.61,1233.55 2894.21,1194.72 2928.8,900.395 2963.4,745.499 2998,1213.54 3032.6,1092.99 3067.2,1262.93 3101.8,1019.03 3136.4,703.953 3171,992.288 3205.6,890.632 3240.2,1047.66 3274.8,1420.24 3309.4,387.382 3344,991.265 3378.6,577.644 3413.2,627.024 3447.8,1104.95 3482.4,704.467 3517,1032.43 3551.6,895.97 3586.2,414.516 3620.8,923.68 3655.4,798.853 3690,1611.28 "></polyline>
+<path clip-path="url(#clip650)" d="M282.907 1753.07 L698.425 1753.07 L698.425 1649.39 L282.907 1649.39  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip650)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="282.907,1753.07 698.425,1753.07 698.425,1649.39 282.907,1649.39 282.907,1753.07 "></polyline>
+<polyline clip-path="url(#clip650)" style="stroke:#009af9; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="323.25,1701.23 565.309,1701.23 "></polyline>
+<path clip-path="url(#clip650)" d="M619.494 1720.91 Q617.689 1725.54 615.976 1726.96 Q614.263 1728.37 611.393 1728.37 L607.99 1728.37 L607.99 1724.8 L610.49 1724.8 Q612.249 1724.8 613.221 1723.97 Q614.194 1723.14 615.374 1720.03 L616.138 1718.09 L605.652 1692.58 L610.166 1692.58 L618.268 1712.86 L626.369 1692.58 L630.883 1692.58 L619.494 1720.91 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip650)" d="M638.175 1714.57 L645.814 1714.57 L645.814 1688.21 L637.504 1689.87 L637.504 1685.61 L645.767 1683.95 L650.443 1683.95 L650.443 1714.57 L658.082 1714.57 L658.082 1718.51 L638.175 1718.51 L638.175 1714.57 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path></svg>
+</div>
+</div>
+</div>
+</section>
+<section id="loops" class="slide level2">
+<h2>Loops</h2>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1"></a>n <span class="op">=</span> <span class="fl">100</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>ep <span class="op">=</span> <span class="fu">zeros</span>(n)</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>n</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    ep[i] <span class="op">=</span> <span class="fu">randn</span>()</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="cf">end</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="fu">println</span>(ep[<span class="fl">1</span><span class="op">:</span><span class="fl">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[-0.5696898459554302, -1.3156863699400974, 0.05578101455873931, -1.3992239362234031, -2.020351010217583]</code></pre>
+</div>
+</div>
+</section>
+<section id="comprehensions" class="slide level2">
+<h2>Comprehensions</h2>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Comprehensions</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="pp">@show</span> [<span class="fl">2</span> <span class="op">*</span> i for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[2i for i = 1:4] = [2, 4, 6, 8]</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>4-element Vector{Int64}:
+ 2
+ 4
+ 6
+ 8</code></pre>
+</div>
+</div>
+</section>
+<section id="manually-calculated-mean" class="slide level2">
+<h2>Manually Calculated Mean</h2>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1"></a>ep_sum <span class="op">=</span> <span class="fl">0.0</span> <span class="co"># careful to use 0.0 here, instead of 0</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="cf">for</span> ep_val <span class="kw">in</span> ep</span>
+<span id="cb8-3"><a href="#cb8-3"></a>    ep_sum <span class="op">=</span> ep_sum <span class="op">+</span> ep_val</span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="cf">end</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="pp">@show</span> ep_mean <span class="op">=</span> ep_sum <span class="op">/</span> <span class="fu">length</span>(ep)</span>
+<span id="cb8-6"><a href="#cb8-6"></a>ep_mean <span class="op">≈</span> <span class="fu">mean</span>(ep)</span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="pp">@show</span> ep_mean</span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="pp">@show</span> <span class="fu">sum</span>(ep) <span class="op">/</span> <span class="fu">length</span>(ep)</span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="pp">@show</span> <span class="fu">sum</span>(<span class="cn">e</span> <span class="cf">for</span> <span class="cn">e</span> <span class="kw">in</span> ep) <span class="op">/</span> <span class="fu">length</span>(ep); <span class="co"># generator/comprehension</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ep_mean = ep_sum / length(ep) = 0.003925558929760197
+ep_mean = 0.003925558929760197
+sum(ep) / length(ep) = 0.00392555892976021
+sum((e for e = ep)) / length(ep) = 0.003925558929760197</code></pre>
+</div>
+</div>
+</section>
+<section id="functions" class="slide level2">
+<h2>Functions</h2>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">function</span> <span class="fu">generatedata</span>(n)</span>
+<span id="cb10-2"><a href="#cb10-2"></a>    ep <span class="op">=</span> <span class="fu">randn</span>(n) <span class="co"># use built in function</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fu">eachindex</span>(ep) <span class="co"># or i in 1:length(ep)</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>        ep[i] <span class="op">=</span> ep[i]<span class="op">^</span><span class="fl">2</span> <span class="co"># squaring the result</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>    <span class="cf">end</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>    <span class="cf">return</span> ep</span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="kw">end</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a>data <span class="op">=</span> <span class="fu">generatedata</span>(<span class="fl">5</span>)</span>
+<span id="cb10-9"><a href="#cb10-9"></a><span class="fu">println</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[0.054825949628392004, 0.43536733392506904, 0.7639754721898103, 0.7010022676329564, 1.9140733972646127]</code></pre>
+</div>
+</div>
+</section>
+<section id="broadcasting" class="slide level2">
+<h2>Broadcasting</h2>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">function</span> <span class="fu">generatedata</span>(n)</span>
+<span id="cb12-2"><a href="#cb12-2"></a>    ep <span class="op">=</span> <span class="fu">randn</span>(n) <span class="co"># use built in function</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>    <span class="cf">return</span> ep <span class="op">.^</span> <span class="fl">2</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="kw">end</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="pp">@show</span> <span class="fu">generatedata</span>(<span class="fl">5</span>)</span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="fu">generatedata2</span>(n) <span class="op">=</span> <span class="fu">randn</span>(n) <span class="op">.^</span> <span class="fl">2</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="pp">@show</span> <span class="fu">generatedata2</span>(<span class="fl">5</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>generatedata(5) = [0.16415984789038715, 1.7647757522376009, 1.3205880860356751, 1.7625969534554917, 0.1322196516940662]
+generatedata2(5) = [0.24544470134765814, 0.0004985774978244056, 0.001983289301439057, 2.14996185558905, 0.043938996352291565]</code></pre>
+</div>
+</div>
+</section>
+<section id="higher-order-functions" class="slide level2">
+<h2>Higher Order Functions</h2>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">generatedata3</span>(n, gen) <span class="op">=</span> <span class="fu">gen</span>.(<span class="fu">randn</span>(n)) <span class="co"># broadcasts on gen</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">f</span>(x) <span class="op">=</span> x<span class="op">^</span><span class="fl">2</span> <span class="co"># simple square function</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="pp">@show</span> <span class="fu">generatedata3</span>(<span class="fl">5</span>, f); <span class="co"># applies f</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>generatedata3(5, f) = [0.0012027120324717736, 0.17390004295941025, 0.12344387143586388, 1.7165729906055396, 7.498242630667191]</code></pre>
+</div>
+</div>
+</section>
+<section id="more-plotting-examples" class="slide level2">
+<h2>More Plotting Examples</h2>
+<div class="cell columns column-output-location" data-execution_count="10">
+<div class="column">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb16-1"><a href="#cb16-1"></a><span class="im">using</span> <span class="bu">Distributions</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="kw">function</span> <span class="fu">plothistogram</span>(distribution, n)</span>
+<span id="cb16-3"><a href="#cb16-3"></a>    <span class="co"># n draws from distribution</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a>    ep <span class="op">=</span> <span class="fu">rand</span>(distribution, n) </span>
+<span id="cb16-5"><a href="#cb16-5"></a>    <span class="cf">return</span> <span class="fu">histogram</span>(ep)</span>
+<span id="cb16-6"><a href="#cb16-6"></a><span class="kw">end</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a>lp <span class="op">=</span> <span class="fu">Laplace</span>()</span>
+<span id="cb16-8"><a href="#cb16-8"></a><span class="fu">plothistogram</span>(lp, <span class="fl">500</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-display" data-execution_count="10">
+<!--?xml version="1.0" encoding="utf-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="960" height="480" viewbox="0 0 3840 1920">
+<defs>
+  <clippath id="clip740">
+    <rect x="0" y="0" width="3840" height="1920"></rect>
+  </clippath>
+</defs>
+<path clip-path="url(#clip740)" d="M0 1920 L3840 1920 L3840 0 L0 0  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<defs>
+  <clippath id="clip741">
+    <rect x="768" y="0" width="2689" height="1920"></rect>
+  </clippath>
+</defs>
+<path clip-path="url(#clip740)" d="M183.521 1811.89 L3792.76 1811.89 L3792.76 47.2441 L183.521 47.2441  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<defs>
+  <clippath id="clip742">
+    <rect x="183" y="47" width="3610" height="1766"></rect>
+  </clippath>
+</defs>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="692.894,1811.89 692.894,47.2441 "></polyline>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1210.99,1811.89 1210.99,47.2441 "></polyline>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1729.09,1811.89 1729.09,47.2441 "></polyline>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="2247.19,1811.89 2247.19,47.2441 "></polyline>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="2765.29,1811.89 2765.29,47.2441 "></polyline>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="3283.38,1811.89 3283.38,47.2441 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="183.521,1811.89 3792.76,1811.89 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="692.894,1811.89 692.894,1792.99 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1210.99,1811.89 1210.99,1792.99 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1729.09,1811.89 1729.09,1792.99 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2247.19,1811.89 2247.19,1792.99 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2765.29,1811.89 2765.29,1792.99 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="3283.38,1811.89 3283.38,1792.99 "></polyline>
+<path clip-path="url(#clip740)" d="M639.422 1868.98 L669.098 1868.98 L669.098 1872.91 L639.422 1872.91 L639.422 1868.98 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M679.237 1851.25 L697.593 1851.25 L697.593 1855.18 L683.519 1855.18 L683.519 1863.66 Q684.538 1863.31 685.556 1863.15 Q686.575 1862.96 687.593 1862.96 Q693.38 1862.96 696.76 1866.13 Q700.14 1869.3 700.14 1874.72 Q700.14 1880.3 696.667 1883.4 Q693.195 1886.48 686.876 1886.48 Q684.7 1886.48 682.431 1886.11 Q680.186 1885.74 677.779 1885 L677.779 1880.3 Q679.862 1881.43 682.084 1881.99 Q684.306 1882.54 686.783 1882.54 Q690.788 1882.54 693.126 1880.44 Q695.464 1878.33 695.464 1874.72 Q695.464 1871.11 693.126 1869 Q690.788 1866.9 686.783 1866.9 Q684.908 1866.9 683.033 1867.31 Q681.181 1867.73 679.237 1868.61 L679.237 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M709.353 1879.93 L714.237 1879.93 L714.237 1885.81 L709.353 1885.81 L709.353 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M734.422 1854.33 Q730.811 1854.33 728.982 1857.89 Q727.177 1861.43 727.177 1868.56 Q727.177 1875.67 728.982 1879.23 Q730.811 1882.78 734.422 1882.78 Q738.056 1882.78 739.862 1879.23 Q741.69 1875.67 741.69 1868.56 Q741.69 1861.43 739.862 1857.89 Q738.056 1854.33 734.422 1854.33 M734.422 1850.62 Q740.232 1850.62 743.288 1855.23 Q746.366 1859.81 746.366 1868.56 Q746.366 1877.29 743.288 1881.9 Q740.232 1886.48 734.422 1886.48 Q728.612 1886.48 725.533 1881.9 Q722.477 1877.29 722.477 1868.56 Q722.477 1859.81 725.533 1855.23 Q728.612 1850.62 734.422 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M1158.02 1868.98 L1187.69 1868.98 L1187.69 1872.91 L1158.02 1872.91 L1158.02 1868.98 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M1201.81 1881.87 L1218.13 1881.87 L1218.13 1885.81 L1196.19 1885.81 L1196.19 1881.87 Q1198.85 1879.12 1203.43 1874.49 Q1208.04 1869.84 1209.22 1868.49 Q1211.47 1865.97 1212.35 1864.23 Q1213.25 1862.47 1213.25 1860.78 Q1213.25 1858.03 1211.3 1856.29 Q1209.38 1854.56 1206.28 1854.56 Q1204.08 1854.56 1201.63 1855.32 Q1199.2 1856.09 1196.42 1857.64 L1196.42 1852.91 Q1199.24 1851.78 1201.7 1851.2 Q1204.15 1850.62 1206.19 1850.62 Q1211.56 1850.62 1214.75 1853.31 Q1217.95 1855.99 1217.95 1860.48 Q1217.95 1862.61 1217.14 1864.53 Q1216.35 1866.43 1214.24 1869.03 Q1213.67 1869.7 1210.56 1872.91 Q1207.46 1876.11 1201.81 1881.87 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M1227.95 1879.93 L1232.83 1879.93 L1232.83 1885.81 L1227.95 1885.81 L1227.95 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M1243.06 1851.25 L1261.42 1851.25 L1261.42 1855.18 L1247.35 1855.18 L1247.35 1863.66 Q1248.36 1863.31 1249.38 1863.15 Q1250.4 1862.96 1251.42 1862.96 Q1257.21 1862.96 1260.59 1866.13 Q1263.97 1869.3 1263.97 1874.72 Q1263.97 1880.3 1260.49 1883.4 Q1257.02 1886.48 1250.7 1886.48 Q1248.53 1886.48 1246.26 1886.11 Q1244.01 1885.74 1241.61 1885 L1241.61 1880.3 Q1243.69 1881.43 1245.91 1881.99 Q1248.13 1882.54 1250.61 1882.54 Q1254.61 1882.54 1256.95 1880.44 Q1259.29 1878.33 1259.29 1874.72 Q1259.29 1871.11 1256.95 1869 Q1254.61 1866.9 1250.61 1866.9 Q1248.73 1866.9 1246.86 1867.31 Q1245.01 1867.73 1243.06 1868.61 L1243.06 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M1706.47 1854.33 Q1702.86 1854.33 1701.03 1857.89 Q1699.23 1861.43 1699.23 1868.56 Q1699.23 1875.67 1701.03 1879.23 Q1702.86 1882.78 1706.47 1882.78 Q1710.11 1882.78 1711.91 1879.23 Q1713.74 1875.67 1713.74 1868.56 Q1713.74 1861.43 1711.91 1857.89 Q1710.11 1854.33 1706.47 1854.33 M1706.47 1850.62 Q1712.28 1850.62 1715.34 1855.23 Q1718.42 1859.81 1718.42 1868.56 Q1718.42 1877.29 1715.34 1881.9 Q1712.28 1886.48 1706.47 1886.48 Q1700.66 1886.48 1697.59 1881.9 Q1694.53 1877.29 1694.53 1868.56 Q1694.53 1859.81 1697.59 1855.23 Q1700.66 1850.62 1706.47 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M1726.64 1879.93 L1731.52 1879.93 L1731.52 1885.81 L1726.64 1885.81 L1726.64 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M1751.71 1854.33 Q1748.09 1854.33 1746.27 1857.89 Q1744.46 1861.43 1744.46 1868.56 Q1744.46 1875.67 1746.27 1879.23 Q1748.09 1882.78 1751.71 1882.78 Q1755.34 1882.78 1757.15 1879.23 Q1758.97 1875.67 1758.97 1868.56 Q1758.97 1861.43 1757.15 1857.89 Q1755.34 1854.33 1751.71 1854.33 M1751.71 1850.62 Q1757.52 1850.62 1760.57 1855.23 Q1763.65 1859.81 1763.65 1868.56 Q1763.65 1877.29 1760.57 1881.9 Q1757.52 1886.48 1751.71 1886.48 Q1745.9 1886.48 1742.82 1881.9 Q1739.76 1877.29 1739.76 1868.56 Q1739.76 1859.81 1742.82 1855.23 Q1745.9 1850.62 1751.71 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M2218.92 1881.87 L2235.24 1881.87 L2235.24 1885.81 L2213.3 1885.81 L2213.3 1881.87 Q2215.96 1879.12 2220.54 1874.49 Q2225.15 1869.84 2226.33 1868.49 Q2228.58 1865.97 2229.46 1864.23 Q2230.36 1862.47 2230.36 1860.78 Q2230.36 1858.03 2228.41 1856.29 Q2226.49 1854.56 2223.39 1854.56 Q2221.19 1854.56 2218.74 1855.32 Q2216.31 1856.09 2213.53 1857.64 L2213.53 1852.91 Q2216.35 1851.78 2218.81 1851.2 Q2221.26 1850.62 2223.3 1850.62 Q2228.67 1850.62 2231.86 1853.31 Q2235.06 1855.99 2235.06 1860.48 Q2235.06 1862.61 2234.25 1864.53 Q2233.46 1866.43 2231.35 1869.03 Q2230.78 1869.7 2227.67 1872.91 Q2224.57 1876.11 2218.92 1881.87 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M2245.06 1879.93 L2249.94 1879.93 L2249.94 1885.81 L2245.06 1885.81 L2245.06 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M2260.17 1851.25 L2278.53 1851.25 L2278.53 1855.18 L2264.46 1855.18 L2264.46 1863.66 Q2265.47 1863.31 2266.49 1863.15 Q2267.51 1862.96 2268.53 1862.96 Q2274.32 1862.96 2277.7 1866.13 Q2281.08 1869.3 2281.08 1874.72 Q2281.08 1880.3 2277.6 1883.4 Q2274.13 1886.48 2267.81 1886.48 Q2265.64 1886.48 2263.37 1886.11 Q2261.12 1885.74 2258.72 1885 L2258.72 1880.3 Q2260.8 1881.43 2263.02 1881.99 Q2265.24 1882.54 2267.72 1882.54 Q2271.72 1882.54 2274.06 1880.44 Q2276.4 1878.33 2276.4 1874.72 Q2276.4 1871.11 2274.06 1869 Q2271.72 1866.9 2267.72 1866.9 Q2265.84 1866.9 2263.97 1867.31 Q2262.12 1867.73 2260.17 1868.61 L2260.17 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M2732.45 1851.25 L2750.81 1851.25 L2750.81 1855.18 L2736.73 1855.18 L2736.73 1863.66 Q2737.75 1863.31 2738.77 1863.15 Q2739.79 1862.96 2740.81 1862.96 Q2746.59 1862.96 2749.97 1866.13 Q2753.35 1869.3 2753.35 1874.72 Q2753.35 1880.3 2749.88 1883.4 Q2746.41 1886.48 2740.09 1886.48 Q2737.91 1886.48 2735.64 1886.11 Q2733.4 1885.74 2730.99 1885 L2730.99 1880.3 Q2733.07 1881.43 2735.3 1881.99 Q2737.52 1882.54 2740 1882.54 Q2744 1882.54 2746.34 1880.44 Q2748.68 1878.33 2748.68 1874.72 Q2748.68 1871.11 2746.34 1869 Q2744 1866.9 2740 1866.9 Q2738.12 1866.9 2736.25 1867.31 Q2734.39 1867.73 2732.45 1868.61 L2732.45 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M2762.57 1879.93 L2767.45 1879.93 L2767.45 1885.81 L2762.57 1885.81 L2762.57 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M2787.63 1854.33 Q2784.02 1854.33 2782.19 1857.89 Q2780.39 1861.43 2780.39 1868.56 Q2780.39 1875.67 2782.19 1879.23 Q2784.02 1882.78 2787.63 1882.78 Q2791.27 1882.78 2793.07 1879.23 Q2794.9 1875.67 2794.9 1868.56 Q2794.9 1861.43 2793.07 1857.89 Q2791.27 1854.33 2787.63 1854.33 M2787.63 1850.62 Q2793.44 1850.62 2796.5 1855.23 Q2799.58 1859.81 2799.58 1868.56 Q2799.58 1877.29 2796.5 1881.9 Q2793.44 1886.48 2787.63 1886.48 Q2781.82 1886.48 2778.75 1881.9 Q2775.69 1877.29 2775.69 1868.56 Q2775.69 1859.81 2778.75 1855.23 Q2781.82 1850.62 2787.63 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M3249.7 1851.25 L3271.92 1851.25 L3271.92 1853.24 L3259.38 1885.81 L3254.49 1885.81 L3266.3 1855.18 L3249.7 1855.18 L3249.7 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M3281.04 1879.93 L3285.93 1879.93 L3285.93 1885.81 L3281.04 1885.81 L3281.04 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M3296.16 1851.25 L3314.52 1851.25 L3314.52 1855.18 L3300.44 1855.18 L3300.44 1863.66 Q3301.46 1863.31 3302.48 1863.15 Q3303.5 1862.96 3304.52 1862.96 Q3310.3 1862.96 3313.68 1866.13 Q3317.06 1869.3 3317.06 1874.72 Q3317.06 1880.3 3313.59 1883.4 Q3310.12 1886.48 3303.8 1886.48 Q3301.62 1886.48 3299.36 1886.11 Q3297.11 1885.74 3294.7 1885 L3294.7 1880.3 Q3296.79 1881.43 3299.01 1881.99 Q3301.23 1882.54 3303.71 1882.54 Q3307.71 1882.54 3310.05 1880.44 Q3312.39 1878.33 3312.39 1874.72 Q3312.39 1871.11 3310.05 1869 Q3307.71 1866.9 3303.71 1866.9 Q3301.83 1866.9 3299.96 1867.31 Q3298.11 1867.73 3296.16 1868.61 L3296.16 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="183.521,1811.89 3792.76,1811.89 "></polyline>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="183.521,1391.73 3792.76,1391.73 "></polyline>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="183.521,971.581 3792.76,971.581 "></polyline>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="183.521,551.428 3792.76,551.428 "></polyline>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="183.521,131.275 3792.76,131.275 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="183.521,1811.89 183.521,47.2441 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="183.521,1811.89 202.419,1811.89 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="183.521,1391.73 202.419,1391.73 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="183.521,971.581 202.419,971.581 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="183.521,551.428 202.419,551.428 "></polyline>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="183.521,131.275 202.419,131.275 "></polyline>
+<path clip-path="url(#clip740)" d="M113.977 1797.69 Q110.366 1797.69 108.537 1801.25 Q106.732 1804.79 106.732 1811.92 Q106.732 1819.03 108.537 1822.59 Q110.366 1826.14 113.977 1826.14 Q117.611 1826.14 119.417 1822.59 Q121.245 1819.03 121.245 1811.92 Q121.245 1804.79 119.417 1801.25 Q117.611 1797.69 113.977 1797.69 M113.977 1793.98 Q119.787 1793.98 122.843 1798.59 Q125.921 1803.17 125.921 1811.92 Q125.921 1820.65 122.843 1825.26 Q119.787 1829.84 113.977 1829.84 Q108.167 1829.84 105.088 1825.26 Q102.033 1820.65 102.033 1811.92 Q102.033 1803.17 105.088 1798.59 Q108.167 1793.98 113.977 1793.98 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M78.8382 1405.08 L95.1576 1405.08 L95.1576 1409.01 L73.2133 1409.01 L73.2133 1405.08 Q75.8753 1402.32 80.4586 1397.7 Q85.0651 1393.04 86.2456 1391.7 Q88.491 1389.18 89.3706 1387.44 Q90.2734 1385.68 90.2734 1383.99 Q90.2734 1381.24 88.3289 1379.5 Q86.4076 1377.76 83.3058 1377.76 Q81.1067 1377.76 78.6531 1378.53 Q76.2225 1379.29 73.4447 1380.84 L73.4447 1376.12 Q76.2688 1374.99 78.7225 1374.41 Q81.1762 1373.83 83.2132 1373.83 Q88.5836 1373.83 91.778 1376.51 Q94.9724 1379.2 94.9724 1383.69 Q94.9724 1385.82 94.1622 1387.74 Q93.3752 1389.64 91.2687 1392.23 Q90.69 1392.9 87.5882 1396.12 Q84.4864 1399.32 78.8382 1405.08 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M105.019 1374.45 L123.375 1374.45 L123.375 1378.39 L109.301 1378.39 L109.301 1386.86 Q110.32 1386.51 111.338 1386.35 Q112.357 1386.17 113.375 1386.17 Q119.162 1386.17 122.542 1389.34 Q125.921 1392.51 125.921 1397.93 Q125.921 1403.51 122.449 1406.61 Q118.977 1409.69 112.657 1409.69 Q110.482 1409.69 108.213 1409.32 Q105.968 1408.95 103.56 1408.2 L103.56 1403.51 Q105.644 1404.64 107.866 1405.2 Q110.088 1405.75 112.565 1405.75 Q116.57 1405.75 118.907 1403.64 Q121.245 1401.54 121.245 1397.93 Q121.245 1394.32 118.907 1392.21 Q116.57 1390.1 112.565 1390.1 Q110.69 1390.1 108.815 1390.52 Q106.963 1390.94 105.019 1391.82 L105.019 1374.45 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M73.8614 954.301 L92.2178 954.301 L92.2178 958.236 L78.1438 958.236 L78.1438 966.709 Q79.1623 966.361 80.1808 966.199 Q81.1993 966.014 82.2178 966.014 Q88.0049 966.014 91.3845 969.185 Q94.7641 972.357 94.7641 977.773 Q94.7641 983.352 91.2919 986.454 Q87.8197 989.533 81.5003 989.533 Q79.3243 989.533 77.0558 989.162 Q74.8105 988.792 72.4031 988.051 L72.4031 983.352 Q74.4864 984.486 76.7086 985.042 Q78.9308 985.597 81.4077 985.597 Q85.4123 985.597 87.7502 983.491 Q90.0882 981.385 90.0882 977.773 Q90.0882 974.162 87.7502 972.056 Q85.4123 969.949 81.4077 969.949 Q79.5327 969.949 77.6577 970.366 Q75.8058 970.783 73.8614 971.662 L73.8614 954.301 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M113.977 957.38 Q110.366 957.38 108.537 960.945 Q106.732 964.486 106.732 971.616 Q106.732 978.722 108.537 982.287 Q110.366 985.829 113.977 985.829 Q117.611 985.829 119.417 982.287 Q121.245 978.722 121.245 971.616 Q121.245 964.486 119.417 960.945 Q117.611 957.38 113.977 957.38 M113.977 953.676 Q119.787 953.676 122.843 958.283 Q125.921 962.866 125.921 971.616 Q125.921 980.343 122.843 984.949 Q119.787 989.533 113.977 989.533 Q108.167 989.533 105.088 984.949 Q102.033 980.343 102.033 971.616 Q102.033 962.866 105.088 958.283 Q108.167 953.676 113.977 953.676 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M73.6299 534.148 L95.852 534.148 L95.852 536.139 L83.3058 568.708 L78.4216 568.708 L90.2271 538.083 L73.6299 538.083 L73.6299 534.148 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M105.019 534.148 L123.375 534.148 L123.375 538.083 L109.301 538.083 L109.301 546.555 Q110.32 546.208 111.338 546.046 Q112.357 545.861 113.375 545.861 Q119.162 545.861 122.542 549.032 Q125.921 552.203 125.921 557.62 Q125.921 563.199 122.449 566.301 Q118.977 569.379 112.657 569.379 Q110.482 569.379 108.213 569.009 Q105.968 568.639 103.56 567.898 L103.56 563.199 Q105.644 564.333 107.866 564.889 Q110.088 565.444 112.565 565.444 Q116.57 565.444 118.907 563.338 Q121.245 561.231 121.245 557.62 Q121.245 554.009 118.907 551.903 Q116.57 549.796 112.565 549.796 Q110.69 549.796 108.815 550.213 Q106.963 550.629 105.019 551.509 L105.019 534.148 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M44.4634 144.62 L52.1023 144.62 L52.1023 118.254 L43.7921 119.921 L43.7921 115.661 L52.056 113.995 L56.7319 113.995 L56.7319 144.62 L64.3707 144.62 L64.3707 148.555 L44.4634 148.555 L44.4634 144.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M83.8151 117.073 Q80.204 117.073 78.3753 120.638 Q76.5697 124.18 76.5697 131.309 Q76.5697 138.416 78.3753 141.981 Q80.204 145.522 83.8151 145.522 Q87.4493 145.522 89.2548 141.981 Q91.0835 138.416 91.0835 131.309 Q91.0835 124.18 89.2548 120.638 Q87.4493 117.073 83.8151 117.073 M83.8151 113.37 Q89.6252 113.37 92.6808 117.976 Q95.7594 122.56 95.7594 131.309 Q95.7594 140.036 92.6808 144.643 Q89.6252 149.226 83.8151 149.226 Q78.0049 149.226 74.9262 144.643 Q71.8707 140.036 71.8707 131.309 Q71.8707 122.56 74.9262 117.976 Q78.0049 113.37 83.8151 113.37 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M113.977 117.073 Q110.366 117.073 108.537 120.638 Q106.732 124.18 106.732 131.309 Q106.732 138.416 108.537 141.981 Q110.366 145.522 113.977 145.522 Q117.611 145.522 119.417 141.981 Q121.245 138.416 121.245 131.309 Q121.245 124.18 119.417 120.638 Q117.611 117.073 113.977 117.073 M113.977 113.37 Q119.787 113.37 122.843 117.976 Q125.921 122.56 125.921 131.309 Q125.921 140.036 122.843 144.643 Q119.787 149.226 113.977 149.226 Q108.167 149.226 105.088 144.643 Q102.033 140.036 102.033 131.309 Q102.033 122.56 105.088 117.976 Q108.167 113.37 113.977 113.37 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip742)" d="M382.036 1795.08 L382.036 1811.89 L485.655 1811.89 L485.655 1795.08 L382.036 1795.08 L382.036 1795.08  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="382.036,1795.08 382.036,1811.89 485.655,1811.89 485.655,1795.08 382.036,1795.08 "></polyline>
+<path clip-path="url(#clip742)" d="M485.655 1811.89 L485.655 1811.89 L589.275 1811.89 L589.275 1811.89 L485.655 1811.89 L485.655 1811.89  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="485.655,1811.89 485.655,1811.89 589.275,1811.89 485.655,1811.89 "></polyline>
+<path clip-path="url(#clip742)" d="M589.275 1811.89 L589.275 1811.89 L692.894 1811.89 L692.894 1811.89 L589.275 1811.89 L589.275 1811.89  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="589.275,1811.89 589.275,1811.89 692.894,1811.89 589.275,1811.89 "></polyline>
+<path clip-path="url(#clip742)" d="M692.894 1778.28 L692.894 1811.89 L796.514 1811.89 L796.514 1778.28 L692.894 1778.28 L692.894 1778.28  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="692.894,1778.28 692.894,1811.89 796.514,1811.89 796.514,1778.28 692.894,1778.28 "></polyline>
+<path clip-path="url(#clip742)" d="M796.514 1744.66 L796.514 1811.89 L900.133 1811.89 L900.133 1744.66 L796.514 1744.66 L796.514 1744.66  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="796.514,1744.66 796.514,1811.89 900.133,1811.89 900.133,1744.66 796.514,1744.66 "></polyline>
+<path clip-path="url(#clip742)" d="M900.133 1744.66 L900.133 1811.89 L1003.75 1811.89 L1003.75 1744.66 L900.133 1744.66 L900.133 1744.66  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="900.133,1744.66 900.133,1811.89 1003.75,1811.89 1003.75,1744.66 900.133,1744.66 "></polyline>
+<path clip-path="url(#clip742)" d="M1003.75 1778.28 L1003.75 1811.89 L1107.37 1811.89 L1107.37 1778.28 L1003.75 1778.28 L1003.75 1778.28  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1003.75,1778.28 1003.75,1811.89 1107.37,1811.89 1107.37,1778.28 1003.75,1778.28 "></polyline>
+<path clip-path="url(#clip742)" d="M1107.37 1711.05 L1107.37 1811.89 L1210.99 1811.89 L1210.99 1711.05 L1107.37 1711.05 L1107.37 1711.05  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1107.37,1711.05 1107.37,1811.89 1210.99,1811.89 1210.99,1711.05 1107.37,1711.05 "></polyline>
+<path clip-path="url(#clip742)" d="M1210.99 1610.21 L1210.99 1811.89 L1314.61 1811.89 L1314.61 1610.21 L1210.99 1610.21 L1210.99 1610.21  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1210.99,1610.21 1210.99,1811.89 1314.61,1811.89 1314.61,1610.21 1210.99,1610.21 "></polyline>
+<path clip-path="url(#clip742)" d="M1314.61 1307.7 L1314.61 1811.89 L1418.23 1811.89 L1418.23 1307.7 L1314.61 1307.7 L1314.61 1307.7  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1314.61,1307.7 1314.61,1811.89 1418.23,1811.89 1418.23,1307.7 1314.61,1307.7 "></polyline>
+<path clip-path="url(#clip742)" d="M1418.23 1139.64 L1418.23 1811.89 L1521.85 1811.89 L1521.85 1139.64 L1418.23 1139.64 L1418.23 1139.64  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1418.23,1139.64 1418.23,1811.89 1521.85,1811.89 1521.85,1139.64 1418.23,1139.64 "></polyline>
+<path clip-path="url(#clip742)" d="M1521.85 753.102 L1521.85 1811.89 L1625.47 1811.89 L1625.47 753.102 L1521.85 753.102 L1521.85 753.102  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1521.85,753.102 1521.85,1811.89 1625.47,1811.89 1625.47,753.102 1521.85,753.102 "></polyline>
+<path clip-path="url(#clip742)" d="M1625.47 517.816 L1625.47 1811.89 L1729.09 1811.89 L1729.09 517.816 L1625.47 517.816 L1625.47 517.816  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1625.47,517.816 1625.47,1811.89 1729.09,1811.89 1729.09,517.816 1625.47,517.816 "></polyline>
+<path clip-path="url(#clip742)" d="M1729.09 47.2441 L1729.09 1811.89 L1832.71 1811.89 L1832.71 47.2441 L1729.09 47.2441 L1729.09 47.2441  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1729.09,47.2441 1729.09,1811.89 1832.71,1811.89 1832.71,47.2441 1729.09,47.2441 "></polyline>
+<path clip-path="url(#clip742)" d="M1832.71 837.132 L1832.71 1811.89 L1936.33 1811.89 L1936.33 837.132 L1832.71 837.132 L1832.71 837.132  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1832.71,837.132 1832.71,1811.89 1936.33,1811.89 1936.33,837.132 1832.71,837.132 "></polyline>
+<path clip-path="url(#clip742)" d="M1936.33 1190.06 L1936.33 1811.89 L2039.95 1811.89 L2039.95 1190.06 L1936.33 1190.06 L1936.33 1190.06  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1936.33,1190.06 1936.33,1811.89 2039.95,1811.89 2039.95,1190.06 1936.33,1190.06 "></polyline>
+<path clip-path="url(#clip742)" d="M2039.95 1425.35 L2039.95 1811.89 L2143.57 1811.89 L2143.57 1425.35 L2039.95 1425.35 L2039.95 1425.35  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2039.95,1425.35 2039.95,1811.89 2143.57,1811.89 2143.57,1425.35 2039.95,1425.35 "></polyline>
+<path clip-path="url(#clip742)" d="M2143.57 1576.6 L2143.57 1811.89 L2247.19 1811.89 L2247.19 1576.6 L2143.57 1576.6 L2143.57 1576.6  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2143.57,1576.6 2143.57,1811.89 2247.19,1811.89 2247.19,1576.6 2143.57,1576.6 "></polyline>
+<path clip-path="url(#clip742)" d="M2247.19 1677.44 L2247.19 1811.89 L2350.81 1811.89 L2350.81 1677.44 L2247.19 1677.44 L2247.19 1677.44  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2247.19,1677.44 2247.19,1811.89 2350.81,1811.89 2350.81,1677.44 2247.19,1677.44 "></polyline>
+<path clip-path="url(#clip742)" d="M2350.81 1778.28 L2350.81 1811.89 L2454.43 1811.89 L2454.43 1778.28 L2350.81 1778.28 L2350.81 1778.28  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2350.81,1778.28 2350.81,1811.89 2454.43,1811.89 2454.43,1778.28 2350.81,1778.28 "></polyline>
+<path clip-path="url(#clip742)" d="M2454.43 1744.66 L2454.43 1811.89 L2558.05 1811.89 L2558.05 1744.66 L2454.43 1744.66 L2454.43 1744.66  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2454.43,1744.66 2454.43,1811.89 2558.05,1811.89 2558.05,1744.66 2454.43,1744.66 "></polyline>
+<path clip-path="url(#clip742)" d="M2558.05 1744.66 L2558.05 1811.89 L2661.67 1811.89 L2661.67 1744.66 L2558.05 1744.66 L2558.05 1744.66  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2558.05,1744.66 2558.05,1811.89 2661.67,1811.89 2661.67,1744.66 2558.05,1744.66 "></polyline>
+<path clip-path="url(#clip742)" d="M2661.67 1778.28 L2661.67 1811.89 L2765.29 1811.89 L2765.29 1778.28 L2661.67 1778.28 L2661.67 1778.28  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2661.67,1778.28 2661.67,1811.89 2765.29,1811.89 2765.29,1778.28 2661.67,1778.28 "></polyline>
+<path clip-path="url(#clip742)" d="M2765.29 1811.89 L2765.29 1811.89 L2868.9 1811.89 L2868.9 1811.89 L2765.29 1811.89 L2765.29 1811.89  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2765.29,1811.89 2765.29,1811.89 2868.9,1811.89 2765.29,1811.89 "></polyline>
+<path clip-path="url(#clip742)" d="M2868.9 1795.08 L2868.9 1811.89 L2972.52 1811.89 L2972.52 1795.08 L2868.9 1795.08 L2868.9 1795.08  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2868.9,1795.08 2868.9,1811.89 2972.52,1811.89 2972.52,1795.08 2868.9,1795.08 "></polyline>
+<path clip-path="url(#clip742)" d="M2972.52 1811.89 L2972.52 1811.89 L3076.14 1811.89 L3076.14 1811.89 L2972.52 1811.89 L2972.52 1811.89  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2972.52,1811.89 2972.52,1811.89 3076.14,1811.89 2972.52,1811.89 "></polyline>
+<path clip-path="url(#clip742)" d="M3076.14 1811.89 L3076.14 1811.89 L3179.76 1811.89 L3179.76 1811.89 L3076.14 1811.89 L3076.14 1811.89  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="3076.14,1811.89 3076.14,1811.89 3179.76,1811.89 3076.14,1811.89 "></polyline>
+<path clip-path="url(#clip742)" d="M3179.76 1811.89 L3179.76 1811.89 L3283.38 1811.89 L3283.38 1811.89 L3179.76 1811.89 L3179.76 1811.89  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="3179.76,1811.89 3179.76,1811.89 3283.38,1811.89 3179.76,1811.89 "></polyline>
+<path clip-path="url(#clip742)" d="M3283.38 1811.89 L3283.38 1811.89 L3387 1811.89 L3387 1811.89 L3283.38 1811.89 L3283.38 1811.89  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="3283.38,1811.89 3283.38,1811.89 3387,1811.89 3283.38,1811.89 "></polyline>
+<path clip-path="url(#clip742)" d="M3387 1811.89 L3387 1811.89 L3490.62 1811.89 L3490.62 1811.89 L3387 1811.89 L3387 1811.89  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="3387,1811.89 3387,1811.89 3490.62,1811.89 3387,1811.89 "></polyline>
+<path clip-path="url(#clip742)" d="M3490.62 1795.08 L3490.62 1811.89 L3594.24 1811.89 L3594.24 1795.08 L3490.62 1795.08 L3490.62 1795.08  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip742)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="3490.62,1795.08 3490.62,1811.89 3594.24,1811.89 3594.24,1795.08 3490.62,1795.08 "></polyline>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="433.845" cy="1795.08" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="537.465" cy="1811.89" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="641.085" cy="1811.89" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="744.704" cy="1778.28" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="848.324" cy="1744.66" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="951.943" cy="1744.66" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1055.56" cy="1778.28" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1159.18" cy="1711.05" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1262.8" cy="1610.21" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1366.42" cy="1307.7" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1470.04" cy="1139.64" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1573.66" cy="753.102" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1677.28" cy="517.816" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1780.9" cy="47.2441" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1884.52" cy="837.132" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1988.14" cy="1190.06" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2091.76" cy="1425.35" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2195.38" cy="1576.6" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2299" cy="1677.44" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2402.62" cy="1778.28" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2506.24" cy="1744.66" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2609.86" cy="1744.66" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2713.48" cy="1778.28" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2817.09" cy="1811.89" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2920.71" cy="1795.08" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="3024.33" cy="1811.89" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="3127.95" cy="1811.89" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="3231.57" cy="1811.89" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="3335.19" cy="1811.89" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="3438.81" cy="1811.89" r="2"></circle>
+<circle clip-path="url(#clip742)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="3542.43" cy="1795.08" r="2"></circle>
+<path clip-path="url(#clip740)" d="M3259.09 209.746 L3672.45 209.746 L3672.45 106.066 L3259.09 106.066  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="3259.09,209.746 3672.45,209.746 3672.45,106.066 3259.09,106.066 3259.09,209.746 "></polyline>
+<path clip-path="url(#clip740)" d="M3299.2 178.642 L3539.81 178.642 L3539.81 137.17 L3299.2 137.17 L3299.2 178.642  Z" fill="#009af9" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip740)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="3299.2,178.642 3539.81,178.642 3539.81,137.17 3299.2,137.17 3299.2,178.642 "></polyline>
+<path clip-path="url(#clip740)" d="M3593.76 177.593 Q3591.95 182.223 3590.24 183.635 Q3588.53 185.047 3585.66 185.047 L3582.25 185.047 L3582.25 181.482 L3584.75 181.482 Q3586.51 181.482 3587.48 180.648 Q3588.46 179.815 3589.64 176.713 L3590.4 174.769 L3579.92 149.26 L3584.43 149.26 L3592.53 169.537 L3600.63 149.26 L3605.15 149.26 L3593.76 177.593 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip740)" d="M3612.44 171.25 L3620.08 171.25 L3620.08 144.885 L3611.77 146.551 L3611.77 142.292 L3620.03 140.626 L3624.71 140.626 L3624.71 171.25 L3632.35 171.25 L3632.35 175.186 L3612.44 175.186 L3612.44 171.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path></svg>
+</div>
+</div>
+</div>
+</section>
+<section id="ranges" class="slide level2">
+<h2>Ranges</h2>
+<div class="cell columns column-output-location" data-execution_count="11">
+<div class="column">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb17-1"><a href="#cb17-1"></a>x <span class="op">=</span> <span class="fu">range</span>(<span class="fl">0.0</span>, <span class="fl">1.0</span>; length <span class="op">=</span> <span class="fl">5</span>)</span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="pp">@show</span> x</span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="pp">@show</span> <span class="fu">Vector</span>(x)</span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="fu">plot</span>(x, <span class="fu">sqrt</span>.(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>x = 0.0:0.25:1.0
+Vector(x) = [0.0, 0.25, 0.5, 0.75, 1.0]</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<!--?xml version="1.0" encoding="utf-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="960" height="480" viewbox="0 0 3840 1920">
+<defs>
+  <clippath id="clip830">
+    <rect x="0" y="0" width="3840" height="1920"></rect>
+  </clippath>
+</defs>
+<path clip-path="url(#clip830)" d="M0 1920 L3840 1920 L3840 0 L0 0  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<defs>
+  <clippath id="clip831">
+    <rect x="768" y="0" width="2689" height="1920"></rect>
+  </clippath>
+</defs>
+<path clip-path="url(#clip830)" d="M200.674 1811.89 L3792.76 1811.89 L3792.76 47.2441 L200.674 47.2441  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<defs>
+  <clippath id="clip832">
+    <rect x="200" y="47" width="3593" height="1766"></rect>
+  </clippath>
+</defs>
+<polyline clip-path="url(#clip832)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="302.337,1811.89 302.337,47.2441 "></polyline>
+<polyline clip-path="url(#clip832)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1149.53,1811.89 1149.53,47.2441 "></polyline>
+<polyline clip-path="url(#clip832)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1996.71,1811.89 1996.71,47.2441 "></polyline>
+<polyline clip-path="url(#clip832)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="2843.9,1811.89 2843.9,47.2441 "></polyline>
+<polyline clip-path="url(#clip832)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="3691.09,1811.89 3691.09,47.2441 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="200.674,1811.89 3792.76,1811.89 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="302.337,1811.89 302.337,1792.99 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1149.53,1811.89 1149.53,1792.99 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1996.71,1811.89 1996.71,1792.99 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2843.9,1811.89 2843.9,1792.99 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="3691.09,1811.89 3691.09,1792.99 "></polyline>
+<path clip-path="url(#clip830)" d="M264.64 1854.33 Q261.029 1854.33 259.2 1857.89 Q257.395 1861.43 257.395 1868.56 Q257.395 1875.67 259.2 1879.23 Q261.029 1882.78 264.64 1882.78 Q268.274 1882.78 270.08 1879.23 Q271.909 1875.67 271.909 1868.56 Q271.909 1861.43 270.08 1857.89 Q268.274 1854.33 264.64 1854.33 M264.64 1850.62 Q270.45 1850.62 273.506 1855.23 Q276.585 1859.81 276.585 1868.56 Q276.585 1877.29 273.506 1881.9 Q270.45 1886.48 264.64 1886.48 Q258.83 1886.48 255.751 1881.9 Q252.696 1877.29 252.696 1868.56 Q252.696 1859.81 255.751 1855.23 Q258.83 1850.62 264.64 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M284.802 1879.93 L289.686 1879.93 L289.686 1885.81 L284.802 1885.81 L284.802 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M309.871 1854.33 Q306.26 1854.33 304.432 1857.89 Q302.626 1861.43 302.626 1868.56 Q302.626 1875.67 304.432 1879.23 Q306.26 1882.78 309.871 1882.78 Q313.506 1882.78 315.311 1879.23 Q317.14 1875.67 317.14 1868.56 Q317.14 1861.43 315.311 1857.89 Q313.506 1854.33 309.871 1854.33 M309.871 1850.62 Q315.682 1850.62 318.737 1855.23 Q321.816 1859.81 321.816 1868.56 Q321.816 1877.29 318.737 1881.9 Q315.682 1886.48 309.871 1886.48 Q304.061 1886.48 300.983 1881.9 Q297.927 1877.29 297.927 1868.56 Q297.927 1859.81 300.983 1855.23 Q304.061 1850.62 309.871 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M340.033 1854.33 Q336.422 1854.33 334.593 1857.89 Q332.788 1861.43 332.788 1868.56 Q332.788 1875.67 334.593 1879.23 Q336.422 1882.78 340.033 1882.78 Q343.667 1882.78 345.473 1879.23 Q347.302 1875.67 347.302 1868.56 Q347.302 1861.43 345.473 1857.89 Q343.667 1854.33 340.033 1854.33 M340.033 1850.62 Q345.843 1850.62 348.899 1855.23 Q351.978 1859.81 351.978 1868.56 Q351.978 1877.29 348.899 1881.9 Q345.843 1886.48 340.033 1886.48 Q334.223 1886.48 331.144 1881.9 Q328.089 1877.29 328.089 1868.56 Q328.089 1859.81 331.144 1855.23 Q334.223 1850.62 340.033 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M1112.33 1854.33 Q1108.72 1854.33 1106.89 1857.89 Q1105.08 1861.43 1105.08 1868.56 Q1105.08 1875.67 1106.89 1879.23 Q1108.72 1882.78 1112.33 1882.78 Q1115.96 1882.78 1117.77 1879.23 Q1119.6 1875.67 1119.6 1868.56 Q1119.6 1861.43 1117.77 1857.89 Q1115.96 1854.33 1112.33 1854.33 M1112.33 1850.62 Q1118.14 1850.62 1121.19 1855.23 Q1124.27 1859.81 1124.27 1868.56 Q1124.27 1877.29 1121.19 1881.9 Q1118.14 1886.48 1112.33 1886.48 Q1106.52 1886.48 1103.44 1881.9 Q1100.38 1877.29 1100.38 1868.56 Q1100.38 1859.81 1103.44 1855.23 Q1106.52 1850.62 1112.33 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M1132.49 1879.93 L1137.37 1879.93 L1137.37 1885.81 L1132.49 1885.81 L1132.49 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M1151.59 1881.87 L1167.91 1881.87 L1167.91 1885.81 L1145.96 1885.81 L1145.96 1881.87 Q1148.62 1879.12 1153.21 1874.49 Q1157.81 1869.84 1158.99 1868.49 Q1161.24 1865.97 1162.12 1864.23 Q1163.02 1862.47 1163.02 1860.78 Q1163.02 1858.03 1161.08 1856.29 Q1159.16 1854.56 1156.05 1854.56 Q1153.85 1854.56 1151.4 1855.32 Q1148.97 1856.09 1146.19 1857.64 L1146.19 1852.91 Q1149.02 1851.78 1151.47 1851.2 Q1153.92 1850.62 1155.96 1850.62 Q1161.33 1850.62 1164.53 1853.31 Q1167.72 1855.99 1167.72 1860.48 Q1167.72 1862.61 1166.91 1864.53 Q1166.12 1866.43 1164.02 1869.03 Q1163.44 1869.7 1160.34 1872.91 Q1157.23 1876.11 1151.59 1881.87 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M1177.77 1851.25 L1196.12 1851.25 L1196.12 1855.18 L1182.05 1855.18 L1182.05 1863.66 Q1183.07 1863.31 1184.09 1863.15 Q1185.1 1862.96 1186.12 1862.96 Q1191.91 1862.96 1195.29 1866.13 Q1198.67 1869.3 1198.67 1874.72 Q1198.67 1880.3 1195.2 1883.4 Q1191.72 1886.48 1185.41 1886.48 Q1183.23 1886.48 1180.96 1886.11 Q1178.72 1885.74 1176.31 1885 L1176.31 1880.3 Q1178.39 1881.43 1180.61 1881.99 Q1182.84 1882.54 1185.31 1882.54 Q1189.32 1882.54 1191.66 1880.44 Q1193.99 1878.33 1193.99 1874.72 Q1193.99 1871.11 1191.66 1869 Q1189.32 1866.9 1185.31 1866.9 Q1183.44 1866.9 1181.56 1867.31 Q1179.71 1867.73 1177.77 1868.61 L1177.77 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M1959.02 1854.33 Q1955.41 1854.33 1953.58 1857.89 Q1951.77 1861.43 1951.77 1868.56 Q1951.77 1875.67 1953.58 1879.23 Q1955.41 1882.78 1959.02 1882.78 Q1962.65 1882.78 1964.46 1879.23 Q1966.29 1875.67 1966.29 1868.56 Q1966.29 1861.43 1964.46 1857.89 Q1962.65 1854.33 1959.02 1854.33 M1959.02 1850.62 Q1964.83 1850.62 1967.88 1855.23 Q1970.96 1859.81 1970.96 1868.56 Q1970.96 1877.29 1967.88 1881.9 Q1964.83 1886.48 1959.02 1886.48 Q1953.21 1886.48 1950.13 1881.9 Q1947.07 1877.29 1947.07 1868.56 Q1947.07 1859.81 1950.13 1855.23 Q1953.21 1850.62 1959.02 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M1979.18 1879.93 L1984.06 1879.93 L1984.06 1885.81 L1979.18 1885.81 L1979.18 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M1994.3 1851.25 L2012.65 1851.25 L2012.65 1855.18 L1998.58 1855.18 L1998.58 1863.66 Q1999.6 1863.31 2000.62 1863.15 Q2001.63 1862.96 2002.65 1862.96 Q2008.44 1862.96 2011.82 1866.13 Q2015.2 1869.3 2015.2 1874.72 Q2015.2 1880.3 2011.73 1883.4 Q2008.25 1886.48 2001.93 1886.48 Q1999.76 1886.48 1997.49 1886.11 Q1995.25 1885.74 1992.84 1885 L1992.84 1880.3 Q1994.92 1881.43 1997.14 1881.99 Q1999.37 1882.54 2001.84 1882.54 Q2005.85 1882.54 2008.18 1880.44 Q2010.52 1878.33 2010.52 1874.72 Q2010.52 1871.11 2008.18 1869 Q2005.85 1866.9 2001.84 1866.9 Q1999.97 1866.9 1998.09 1867.31 Q1996.24 1867.73 1994.3 1868.61 L1994.3 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M2034.41 1854.33 Q2030.8 1854.33 2028.97 1857.89 Q2027.17 1861.43 2027.17 1868.56 Q2027.17 1875.67 2028.97 1879.23 Q2030.8 1882.78 2034.41 1882.78 Q2038.05 1882.78 2039.85 1879.23 Q2041.68 1875.67 2041.68 1868.56 Q2041.68 1861.43 2039.85 1857.89 Q2038.05 1854.33 2034.41 1854.33 M2034.41 1850.62 Q2040.22 1850.62 2043.28 1855.23 Q2046.36 1859.81 2046.36 1868.56 Q2046.36 1877.29 2043.28 1881.9 Q2040.22 1886.48 2034.41 1886.48 Q2028.6 1886.48 2025.52 1881.9 Q2022.47 1877.29 2022.47 1868.56 Q2022.47 1859.81 2025.52 1855.23 Q2028.6 1850.62 2034.41 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M2806.71 1854.33 Q2803.09 1854.33 2801.27 1857.89 Q2799.46 1861.43 2799.46 1868.56 Q2799.46 1875.67 2801.27 1879.23 Q2803.09 1882.78 2806.71 1882.78 Q2810.34 1882.78 2812.14 1879.23 Q2813.97 1875.67 2813.97 1868.56 Q2813.97 1861.43 2812.14 1857.89 Q2810.34 1854.33 2806.71 1854.33 M2806.71 1850.62 Q2812.52 1850.62 2815.57 1855.23 Q2818.65 1859.81 2818.65 1868.56 Q2818.65 1877.29 2815.57 1881.9 Q2812.52 1886.48 2806.71 1886.48 Q2800.9 1886.48 2797.82 1881.9 Q2794.76 1877.29 2794.76 1868.56 Q2794.76 1859.81 2797.82 1855.23 Q2800.9 1850.62 2806.71 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M2826.87 1879.93 L2831.75 1879.93 L2831.75 1885.81 L2826.87 1885.81 L2826.87 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M2840.76 1851.25 L2862.98 1851.25 L2862.98 1853.24 L2850.43 1885.81 L2845.55 1885.81 L2857.35 1855.18 L2840.76 1855.18 L2840.76 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M2872.14 1851.25 L2890.5 1851.25 L2890.5 1855.18 L2876.43 1855.18 L2876.43 1863.66 Q2877.45 1863.31 2878.46 1863.15 Q2879.48 1862.96 2880.5 1862.96 Q2886.29 1862.96 2889.67 1866.13 Q2893.05 1869.3 2893.05 1874.72 Q2893.05 1880.3 2889.58 1883.4 Q2886.1 1886.48 2879.78 1886.48 Q2877.61 1886.48 2875.34 1886.11 Q2873.09 1885.74 2870.69 1885 L2870.69 1880.3 Q2872.77 1881.43 2874.99 1881.99 Q2877.21 1882.54 2879.69 1882.54 Q2883.7 1882.54 2886.03 1880.44 Q2888.37 1878.33 2888.37 1874.72 Q2888.37 1871.11 2886.03 1869 Q2883.7 1866.9 2879.69 1866.9 Q2877.82 1866.9 2875.94 1867.31 Q2874.09 1867.73 2872.14 1868.61 L2872.14 1851.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M3643.17 1881.87 L3650.8 1881.87 L3650.8 1855.51 L3642.49 1857.17 L3642.49 1852.91 L3650.76 1851.25 L3655.43 1851.25 L3655.43 1881.87 L3663.07 1881.87 L3663.07 1885.81 L3643.17 1885.81 L3643.17 1881.87 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M3672.52 1879.93 L3677.4 1879.93 L3677.4 1885.81 L3672.52 1885.81 L3672.52 1879.93 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M3697.59 1854.33 Q3693.98 1854.33 3692.15 1857.89 Q3690.34 1861.43 3690.34 1868.56 Q3690.34 1875.67 3692.15 1879.23 Q3693.98 1882.78 3697.59 1882.78 Q3701.22 1882.78 3703.03 1879.23 Q3704.85 1875.67 3704.85 1868.56 Q3704.85 1861.43 3703.03 1857.89 Q3701.22 1854.33 3697.59 1854.33 M3697.59 1850.62 Q3703.4 1850.62 3706.45 1855.23 Q3709.53 1859.81 3709.53 1868.56 Q3709.53 1877.29 3706.45 1881.9 Q3703.4 1886.48 3697.59 1886.48 Q3691.78 1886.48 3688.7 1881.9 Q3685.64 1877.29 3685.64 1868.56 Q3685.64 1859.81 3688.7 1855.23 Q3691.78 1850.62 3697.59 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M3727.75 1854.33 Q3724.14 1854.33 3722.31 1857.89 Q3720.5 1861.43 3720.5 1868.56 Q3720.5 1875.67 3722.31 1879.23 Q3724.14 1882.78 3727.75 1882.78 Q3731.38 1882.78 3733.19 1879.23 Q3735.02 1875.67 3735.02 1868.56 Q3735.02 1861.43 3733.19 1857.89 Q3731.38 1854.33 3727.75 1854.33 M3727.75 1850.62 Q3733.56 1850.62 3736.61 1855.23 Q3739.69 1859.81 3739.69 1868.56 Q3739.69 1877.29 3736.61 1881.9 Q3733.56 1886.48 3727.75 1886.48 Q3721.94 1886.48 3718.86 1881.9 Q3715.8 1877.29 3715.8 1868.56 Q3715.8 1859.81 3718.86 1855.23 Q3721.94 1850.62 3727.75 1850.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><polyline clip-path="url(#clip832)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="200.674,1761.95 3792.76,1761.95 "></polyline>
+<polyline clip-path="url(#clip832)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="200.674,1345.76 3792.76,1345.76 "></polyline>
+<polyline clip-path="url(#clip832)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="200.674,929.566 3792.76,929.566 "></polyline>
+<polyline clip-path="url(#clip832)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="200.674,513.376 3792.76,513.376 "></polyline>
+<polyline clip-path="url(#clip832)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="200.674,97.1868 3792.76,97.1868 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="200.674,1811.89 200.674,47.2441 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="200.674,1761.95 219.572,1761.95 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="200.674,1345.76 219.572,1345.76 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="200.674,929.566 219.572,929.566 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="200.674,513.376 219.572,513.376 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="200.674,97.1868 219.572,97.1868 "></polyline>
+<path clip-path="url(#clip830)" d="M55.7365 1747.74 Q52.1254 1747.74 50.2967 1751.31 Q48.4912 1754.85 48.4912 1761.98 Q48.4912 1769.09 50.2967 1772.65 Q52.1254 1776.19 55.7365 1776.19 Q59.3707 1776.19 61.1763 1772.65 Q63.005 1769.09 63.005 1761.98 Q63.005 1754.85 61.1763 1751.31 Q59.3707 1747.74 55.7365 1747.74 M55.7365 1744.04 Q61.5467 1744.04 64.6022 1748.65 Q67.6809 1753.23 67.6809 1761.98 Q67.6809 1770.71 64.6022 1775.31 Q61.5467 1779.9 55.7365 1779.9 Q49.9264 1779.9 46.8477 1775.31 Q43.7921 1770.71 43.7921 1761.98 Q43.7921 1753.23 46.8477 1748.65 Q49.9264 1744.04 55.7365 1744.04 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M75.8984 1773.35 L80.7827 1773.35 L80.7827 1779.23 L75.8984 1779.23 L75.8984 1773.35 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M100.968 1747.74 Q97.3567 1747.74 95.528 1751.31 Q93.7224 1754.85 93.7224 1761.98 Q93.7224 1769.09 95.528 1772.65 Q97.3567 1776.19 100.968 1776.19 Q104.602 1776.19 106.408 1772.65 Q108.236 1769.09 108.236 1761.98 Q108.236 1754.85 106.408 1751.31 Q104.602 1747.74 100.968 1747.74 M100.968 1744.04 Q106.778 1744.04 109.833 1748.65 Q112.912 1753.23 112.912 1761.98 Q112.912 1770.71 109.833 1775.31 Q106.778 1779.9 100.968 1779.9 Q95.1576 1779.9 92.0789 1775.31 Q89.0234 1770.71 89.0234 1761.98 Q89.0234 1753.23 92.0789 1748.65 Q95.1576 1744.04 100.968 1744.04 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M131.13 1747.74 Q127.519 1747.74 125.69 1751.31 Q123.884 1754.85 123.884 1761.98 Q123.884 1769.09 125.69 1772.65 Q127.519 1776.19 131.13 1776.19 Q134.764 1776.19 136.569 1772.65 Q138.398 1769.09 138.398 1761.98 Q138.398 1754.85 136.569 1751.31 Q134.764 1747.74 131.13 1747.74 M131.13 1744.04 Q136.94 1744.04 139.995 1748.65 Q143.074 1753.23 143.074 1761.98 Q143.074 1770.71 139.995 1775.31 Q136.94 1779.9 131.13 1779.9 Q125.319 1779.9 122.241 1775.31 Q119.185 1770.71 119.185 1761.98 Q119.185 1753.23 122.241 1748.65 Q125.319 1744.04 131.13 1744.04 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M56.7319 1331.55 Q53.1208 1331.55 51.2921 1335.12 Q49.4865 1338.66 49.4865 1345.79 Q49.4865 1352.9 51.2921 1356.46 Q53.1208 1360 56.7319 1360 Q60.3661 1360 62.1717 1356.46 Q64.0004 1352.9 64.0004 1345.79 Q64.0004 1338.66 62.1717 1335.12 Q60.3661 1331.55 56.7319 1331.55 M56.7319 1327.85 Q62.542 1327.85 65.5976 1332.46 Q68.6763 1337.04 68.6763 1345.79 Q68.6763 1354.52 65.5976 1359.12 Q62.542 1363.71 56.7319 1363.71 Q50.9217 1363.71 47.843 1359.12 Q44.7875 1354.52 44.7875 1345.79 Q44.7875 1337.04 47.843 1332.46 Q50.9217 1327.85 56.7319 1327.85 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M76.8938 1357.16 L81.778 1357.16 L81.778 1363.04 L76.8938 1363.04 L76.8938 1357.16 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M95.9909 1359.1 L112.31 1359.1 L112.31 1363.04 L90.366 1363.04 L90.366 1359.1 Q93.028 1356.35 97.6113 1351.72 Q102.218 1347.06 103.398 1345.72 Q105.644 1343.2 106.523 1341.46 Q107.426 1339.7 107.426 1338.01 Q107.426 1335.26 105.482 1333.52 Q103.56 1331.79 100.458 1331.79 Q98.2594 1331.79 95.8057 1332.55 Q93.3752 1333.31 90.5974 1334.86 L90.5974 1330.14 Q93.4215 1329.01 95.8752 1328.43 Q98.3289 1327.85 100.366 1327.85 Q105.736 1327.85 108.931 1330.54 Q112.125 1333.22 112.125 1337.71 Q112.125 1339.84 111.315 1341.76 Q110.528 1343.66 108.421 1346.25 Q107.843 1346.92 104.741 1350.14 Q101.639 1353.34 95.9909 1359.1 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M122.171 1328.48 L140.528 1328.48 L140.528 1332.41 L126.454 1332.41 L126.454 1340.88 Q127.472 1340.54 128.491 1340.37 Q129.509 1340.19 130.528 1340.19 Q136.315 1340.19 139.694 1343.36 Q143.074 1346.53 143.074 1351.95 Q143.074 1357.53 139.602 1360.63 Q136.13 1363.71 129.81 1363.71 Q127.634 1363.71 125.366 1363.34 Q123.12 1362.97 120.713 1362.23 L120.713 1357.53 Q122.796 1358.66 125.019 1359.22 Q127.241 1359.77 129.718 1359.77 Q133.722 1359.77 136.06 1357.67 Q138.398 1355.56 138.398 1351.95 Q138.398 1348.34 136.06 1346.23 Q133.722 1344.12 129.718 1344.12 Q127.843 1344.12 125.968 1344.54 Q124.116 1344.96 122.171 1345.84 L122.171 1328.48 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M55.7365 915.365 Q52.1254 915.365 50.2967 918.929 Q48.4912 922.471 48.4912 929.601 Q48.4912 936.707 50.2967 940.272 Q52.1254 943.814 55.7365 943.814 Q59.3707 943.814 61.1763 940.272 Q63.005 936.707 63.005 929.601 Q63.005 922.471 61.1763 918.929 Q59.3707 915.365 55.7365 915.365 M55.7365 911.661 Q61.5467 911.661 64.6022 916.267 Q67.6809 920.851 67.6809 929.601 Q67.6809 938.328 64.6022 942.934 Q61.5467 947.517 55.7365 947.517 Q49.9264 947.517 46.8477 942.934 Q43.7921 938.328 43.7921 929.601 Q43.7921 920.851 46.8477 916.267 Q49.9264 911.661 55.7365 911.661 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M75.8984 940.966 L80.7827 940.966 L80.7827 946.846 L75.8984 946.846 L75.8984 940.966 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M91.0141 912.286 L109.37 912.286 L109.37 916.221 L95.2965 916.221 L95.2965 924.693 Q96.315 924.346 97.3335 924.184 Q98.352 923.999 99.3705 923.999 Q105.158 923.999 108.537 927.17 Q111.917 930.341 111.917 935.758 Q111.917 941.337 108.445 944.439 Q104.972 947.517 98.6529 947.517 Q96.477 947.517 94.2085 947.147 Q91.9632 946.777 89.5558 946.036 L89.5558 941.337 Q91.6391 942.471 93.8613 943.027 Q96.0835 943.582 98.5604 943.582 Q102.565 943.582 104.903 941.476 Q107.241 939.369 107.241 935.758 Q107.241 932.147 104.903 930.041 Q102.565 927.934 98.5604 927.934 Q96.6854 927.934 94.8104 928.351 Q92.9585 928.767 91.0141 929.647 L91.0141 912.286 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M131.13 915.365 Q127.519 915.365 125.69 918.929 Q123.884 922.471 123.884 929.601 Q123.884 936.707 125.69 940.272 Q127.519 943.814 131.13 943.814 Q134.764 943.814 136.569 940.272 Q138.398 936.707 138.398 929.601 Q138.398 922.471 136.569 918.929 Q134.764 915.365 131.13 915.365 M131.13 911.661 Q136.94 911.661 139.995 916.267 Q143.074 920.851 143.074 929.601 Q143.074 938.328 139.995 942.934 Q136.94 947.517 131.13 947.517 Q125.319 947.517 122.241 942.934 Q119.185 938.328 119.185 929.601 Q119.185 920.851 122.241 916.267 Q125.319 911.661 131.13 911.661 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M56.7319 499.175 Q53.1208 499.175 51.2921 502.74 Q49.4865 506.282 49.4865 513.411 Q49.4865 520.518 51.2921 524.082 Q53.1208 527.624 56.7319 527.624 Q60.3661 527.624 62.1717 524.082 Q64.0004 520.518 64.0004 513.411 Q64.0004 506.282 62.1717 502.74 Q60.3661 499.175 56.7319 499.175 M56.7319 495.471 Q62.542 495.471 65.5976 500.078 Q68.6763 504.661 68.6763 513.411 Q68.6763 522.138 65.5976 526.744 Q62.542 531.328 56.7319 531.328 Q50.9217 531.328 47.843 526.744 Q44.7875 522.138 44.7875 513.411 Q44.7875 504.661 47.843 500.078 Q50.9217 495.471 56.7319 495.471 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M76.8938 524.777 L81.778 524.777 L81.778 530.656 L76.8938 530.656 L76.8938 524.777 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M90.7826 496.096 L113.005 496.096 L113.005 498.087 L100.458 530.656 L95.5743 530.656 L107.38 500.032 L90.7826 500.032 L90.7826 496.096 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M122.171 496.096 L140.528 496.096 L140.528 500.032 L126.454 500.032 L126.454 508.504 Q127.472 508.157 128.491 507.994 Q129.509 507.809 130.528 507.809 Q136.315 507.809 139.694 510.981 Q143.074 514.152 143.074 519.569 Q143.074 525.147 139.602 528.249 Q136.13 531.328 129.81 531.328 Q127.634 531.328 125.366 530.957 Q123.12 530.587 120.713 529.846 L120.713 525.147 Q122.796 526.281 125.019 526.837 Q127.241 527.393 129.718 527.393 Q133.722 527.393 136.06 525.286 Q138.398 523.18 138.398 519.569 Q138.398 515.957 136.06 513.851 Q133.722 511.744 129.718 511.744 Q127.843 511.744 125.968 512.161 Q124.116 512.578 122.171 513.457 L122.171 496.096 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M46.5467 110.532 L54.1856 110.532 L54.1856 84.1661 L45.8754 85.8327 L45.8754 81.5735 L54.1393 79.9068 L58.8152 79.9068 L58.8152 110.532 L66.454 110.532 L66.454 114.467 L46.5467 114.467 L46.5467 110.532 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M75.8984 108.587 L80.7827 108.587 L80.7827 114.467 L75.8984 114.467 L75.8984 108.587 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M100.968 82.9855 Q97.3567 82.9855 95.528 86.5503 Q93.7224 90.092 93.7224 97.2216 Q93.7224 104.328 95.528 107.893 Q97.3567 111.434 100.968 111.434 Q104.602 111.434 106.408 107.893 Q108.236 104.328 108.236 97.2216 Q108.236 90.092 106.408 86.5503 Q104.602 82.9855 100.968 82.9855 M100.968 79.2818 Q106.778 79.2818 109.833 83.8883 Q112.912 88.4716 112.912 97.2216 Q112.912 105.948 109.833 110.555 Q106.778 115.138 100.968 115.138 Q95.1576 115.138 92.0789 110.555 Q89.0234 105.948 89.0234 97.2216 Q89.0234 88.4716 92.0789 83.8883 Q95.1576 79.2818 100.968 79.2818 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M131.13 82.9855 Q127.519 82.9855 125.69 86.5503 Q123.884 90.092 123.884 97.2216 Q123.884 104.328 125.69 107.893 Q127.519 111.434 131.13 111.434 Q134.764 111.434 136.569 107.893 Q138.398 104.328 138.398 97.2216 Q138.398 90.092 136.569 86.5503 Q134.764 82.9855 131.13 82.9855 M131.13 79.2818 Q136.94 79.2818 139.995 83.8883 Q143.074 88.4716 143.074 97.2216 Q143.074 105.948 139.995 110.555 Q136.94 115.138 131.13 115.138 Q125.319 115.138 122.241 110.555 Q119.185 105.948 119.185 97.2216 Q119.185 88.4716 122.241 83.8883 Q125.319 79.2818 131.13 79.2818 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><polyline clip-path="url(#clip832)" style="stroke:#009af9; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="302.337,1761.95 1149.53,929.566 1996.71,584.783 2843.9,320.222 3691.09,97.1868 "></polyline>
+<path clip-path="url(#clip830)" d="M320.41 209.746 L732.049 209.746 L732.049 106.066 L320.41 106.066  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip830)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="320.41,209.746 732.049,209.746 732.049,106.066 320.41,106.066 320.41,209.746 "></polyline>
+<polyline clip-path="url(#clip830)" style="stroke:#009af9; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="360.322,157.906 599.794,157.906 "></polyline>
+<path clip-path="url(#clip830)" d="M653.549 177.593 Q651.743 182.223 650.03 183.635 Q648.317 185.047 645.447 185.047 L642.044 185.047 L642.044 181.482 L644.544 181.482 Q646.303 181.482 647.276 180.648 Q648.248 179.815 649.428 176.713 L650.192 174.769 L639.706 149.26 L644.22 149.26 L652.322 169.537 L660.424 149.26 L664.938 149.26 L653.549 177.593 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip830)" d="M672.229 171.25 L679.868 171.25 L679.868 144.885 L671.558 146.551 L671.558 142.292 L679.822 140.626 L684.498 140.626 L684.498 171.25 L692.137 171.25 L692.137 175.186 L672.229 175.186 L672.229 171.25 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path></svg>
+</div>
+</div>
+</div>
+</section>
+<section id="defining-functions" class="slide level2">
+<h2>Defining Functions</h2>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">f</span>(x) <span class="op">=</span> x<span class="op">^</span><span class="fl">2</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="kw">function</span> <span class="fu">f2</span>(x)</span>
+<span id="cb19-3"><a href="#cb19-3"></a>    <span class="cf">return</span> x<span class="op">^</span><span class="fl">2</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="kw">end</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a>f3 <span class="op">=</span> x <span class="op">-&gt;</span> x<span class="op">^</span><span class="fl">2</span> <span class="co"># assignment not required</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a><span class="pp">@show</span> <span class="fu">f</span>(<span class="fl">2</span>), <span class="fu">f2</span>(<span class="fl">2</span>), <span class="fu">f3</span>(<span class="fl">2</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(f(2), f2(2), f3(2)) = (4, 4, 4)</code></pre>
+</div>
+</div>
+</section>
+<section id="default-arguments" class="slide level2">
+<h2>Default Arguments</h2>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">f</span>(x, a <span class="op">=</span> <span class="fl">1</span>) <span class="op">=</span> <span class="fu">exp</span>(<span class="fu">cos</span>(a <span class="op">*</span> x))</span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="pp">@show</span> <span class="fu">f</span>(<span class="cn">pi</span>)</span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="pp">@show</span> <span class="fu">f</span>(<span class="cn">pi</span>, <span class="fl">2</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>f(pi) = 0.36787944117144233
+f(pi, 2) = 2.718281828459045</code></pre>
+</div>
+</div>
+</section>
+<section id="keyword-arguments" class="slide level2">
+<h2>Keyword Arguments</h2>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">f</span>(x; a <span class="op">=</span> <span class="fl">1</span>) <span class="op">=</span> <span class="fu">exp</span>(<span class="fu">cos</span>(a <span class="op">*</span> x))  <span class="co"># note the ; in the definition</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="pp">@show</span> <span class="fu">f</span>(<span class="cn">pi</span>)</span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="pp">@show</span> <span class="fu">f</span>(<span class="cn">pi</span>; a <span class="op">=</span> <span class="fl">2</span>)</span>
+<span id="cb23-4"><a href="#cb23-4"></a>a <span class="op">=</span> <span class="fl">2</span></span>
+<span id="cb23-5"><a href="#cb23-5"></a><span class="pp">@show</span> <span class="fu">f</span>(<span class="cn">pi</span>; a); <span class="co"># equivalent to f(pi; a = a)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>f(pi) = 0.36787944117144233
+f(pi; a = 2) = 2.718281828459045
+f(pi; a) = 2.718281828459045</code></pre>
+</div>
+</div>
+</section>
+<section id="closures" class="slide level2">
+<h2>Closures</h2>
+<ul>
+<li>In general, try to avoid globals and closures outside of functions</li>
+</ul>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb25-1"><a href="#cb25-1"></a>a <span class="op">=</span> <span class="fl">0.2</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="fu">f</span>(x) <span class="op">=</span> a <span class="op">*</span> x<span class="op">^</span><span class="fl">2</span>  <span class="co"># refers to the `a` in the outer scope</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="pp">@show</span> <span class="fu">f</span>(<span class="fl">1</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>f(1) = 0.2</code></pre>
+</div>
+</div>
+</section>
+<section id="closures-inside-functions" class="slide level2">
+<h2>Closures Inside Functions</h2>
+<ul>
+<li>But within a function they are safe and common</li>
+</ul>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">function</span> <span class="fu">g</span>(a)</span>
+<span id="cb27-2"><a href="#cb27-2"></a>    <span class="fu">f</span>(x) <span class="op">=</span> a <span class="op">*</span> x<span class="op">^</span><span class="fl">2</span>  <span class="co"># refers to the `a` passed in the function</span></span>
+<span id="cb27-3"><a href="#cb27-3"></a>    <span class="cf">return</span> <span class="fu">f</span>(<span class="fl">1</span>)</span>
+<span id="cb27-4"><a href="#cb27-4"></a><span class="kw">end</span></span>
+<span id="cb27-5"><a href="#cb27-5"></a><span class="pp">@show</span> <span class="fu">g</span>(<span class="fl">0.2</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>g(0.2) = 0.2</code></pre>
+</div>
+</div>
+</section>
+<section id="tuples-and-named-tuples" class="slide level2">
+<h2>Tuples and Named Tuples</h2>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb29-1"><a href="#cb29-1"></a>t <span class="op">=</span> (<span class="fl">1</span>, <span class="fl">2.0</span>, <span class="st">"hello"</span>)</span>
+<span id="cb29-2"><a href="#cb29-2"></a><span class="pp">@show</span> t[<span class="fl">1</span>]</span>
+<span id="cb29-3"><a href="#cb29-3"></a>nt <span class="op">=</span> (a <span class="op">=</span> <span class="fl">1</span>, b <span class="op">=</span> <span class="fl">2.0</span>, c <span class="op">=</span> <span class="st">"hello"</span>)</span>
+<span id="cb29-4"><a href="#cb29-4"></a><span class="pp">@show</span> nt</span>
+<span id="cb29-5"><a href="#cb29-5"></a><span class="pp">@show</span> nt.a;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>t[1] = 1
+nt = (a = 1, b = 2.0, c = "hello")
+nt.a = 1</code></pre>
+</div>
+</div>
+</section>
+<section id="tuples-packing-and-unpacking" class="slide level2">
+<h2>Tuples Packing and Unpacking</h2>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">function</span> <span class="fu">solve_model</span>(x)</span>
+<span id="cb31-2"><a href="#cb31-2"></a>    a <span class="op">=</span> x<span class="op">^</span><span class="fl">2</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a>    b <span class="op">=</span> <span class="fl">2</span> <span class="op">*</span> a</span>
+<span id="cb31-4"><a href="#cb31-4"></a>    c <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb31-5"><a href="#cb31-5"></a>    <span class="cf">return</span> (; a, b, c)  <span class="co"># note local scope of tuples!</span></span>
+<span id="cb31-6"><a href="#cb31-6"></a><span class="kw">end</span></span>
+<span id="cb31-7"><a href="#cb31-7"></a><span class="pp">@show</span> <span class="fu">solve_model</span>(<span class="fl">0.1</span>)</span>
+<span id="cb31-8"><a href="#cb31-8"></a>(; a, b, c) <span class="op">=</span> <span class="fu">solve_model</span>(<span class="fl">0.1</span>)</span>
+<span id="cb31-9"><a href="#cb31-9"></a><span class="fu">println</span>(<span class="st">"a = </span><span class="sc">$</span>a<span class="st">, b = </span><span class="sc">$</span>b<span class="st">, c = </span><span class="sc">$</span>c<span class="st">"</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>solve_model(0.1) = (a = 0.010000000000000002, b = 0.020000000000000004, c = 0.030000000000000006)
+a = 0.010000000000000002, b = 0.020000000000000004, c = 0.030000000000000006</code></pre>
+</div>
+</div>
+</section>
+<section id="array-basics" class="slide level2">
+<h2>Array Basics</h2>
+<div class="cell columns column-output-location" data-execution_count="19">
+<div class="column">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb33-1"><a href="#cb33-1"></a>b <span class="op">=</span> [<span class="fl">1.0</span>, <span class="fl">2.1</span>, <span class="fl">3.0</span>] <span class="co"># 1d array</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a>A <span class="op">=</span> [<span class="fl">1</span> <span class="fl">2</span>; <span class="fl">3</span> <span class="fl">4</span>] <span class="co"># 2x2 matrix</span></span>
+<span id="cb33-3"><a href="#cb33-3"></a><span class="pp">@show</span> <span class="fu">size</span>(b)</span>
+<span id="cb33-4"><a href="#cb33-4"></a><span class="pp">@show</span> <span class="fu">size</span>(A)</span>
+<span id="cb33-5"><a href="#cb33-5"></a><span class="pp">@show</span> <span class="fu">typeof</span>(b)</span>
+<span id="cb33-6"><a href="#cb33-6"></a><span class="pp">@show</span> <span class="fu">typeof</span>(A)</span>
+<span id="cb33-7"><a href="#cb33-7"></a><span class="pp">@show</span> <span class="fu">zeros</span>(<span class="fl">3</span>)</span>
+<span id="cb33-8"><a href="#cb33-8"></a><span class="pp">@show</span> <span class="fu">ones</span>(<span class="fl">2</span>, <span class="fl">2</span>)</span>
+<span id="cb33-9"><a href="#cb33-9"></a><span class="pp">@show</span> <span class="fu">fill</span>(<span class="fl">1.0</span>, <span class="fl">2</span>, <span class="fl">2</span>)</span>
+<span id="cb33-10"><a href="#cb33-10"></a><span class="pp">@show</span> <span class="fu">similar</span>(A)</span>
+<span id="cb33-11"><a href="#cb33-11"></a><span class="pp">@show</span> A[<span class="fl">1</span>, <span class="fl">1</span>]</span>
+<span id="cb33-12"><a href="#cb33-12"></a><span class="pp">@show</span> A[<span class="fl">1</span>, <span class="op">:</span>]</span>
+<span id="cb33-13"><a href="#cb33-13"></a><span class="pp">@show</span> A[<span class="fl">1</span><span class="op">:</span><span class="kw">end</span>, <span class="fl">1</span>];</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>size(b) = (3,)
+size(A) = (2, 2)
+typeof(b) = Vector{Float64}
+typeof(A) = Matrix{Int64}
+zeros(3) = [0.0, 0.0, 0.0]
+ones(2, 2) = [1.0 1.0; 1.0 1.0]
+fill(1.0, 2, 2) = [1.0 1.0; 1.0 1.0]
+similar(A) = [4780175888 4852723040; 4852721936 4852723040]
+A[1, 1] = 1
+A[1, :] = [1, 2]
+A[1:end, 1] = [1, 3]</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="linear-algebra-basics" class="slide level2">
+<h2>Linear Algebra Basics</h2>
+<div class="cell columns column-output-location" data-execution_count="20">
+<div class="column">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb35-1"><a href="#cb35-1"></a>A <span class="op">=</span> [<span class="fl">1</span> <span class="fl">2</span>; <span class="fl">3</span> <span class="fl">4</span>]</span>
+<span id="cb35-2"><a href="#cb35-2"></a>b <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">2</span>]</span>
+<span id="cb35-3"><a href="#cb35-3"></a><span class="pp">@show</span> A <span class="op">*</span> b <span class="co"># Matrix product</span></span>
+<span id="cb35-4"><a href="#cb35-4"></a><span class="pp">@show</span> A<span class="op">'</span> <span class="co"># transpose</span></span>
+<span id="cb35-5"><a href="#cb35-5"></a><span class="pp">@show</span> <span class="fu">dot</span>(b, [<span class="fl">5.0</span>, <span class="fl">2.0</span>]) <span class="co"># dot product</span></span>
+<span id="cb35-6"><a href="#cb35-6"></a><span class="pp">@show</span> b<span class="op">'</span> <span class="op">*</span> b <span class="co"># dot product</span></span>
+<span id="cb35-7"><a href="#cb35-7"></a><span class="pp">@show</span> <span class="fu">Diagonal</span>([<span class="fl">1.0</span>, <span class="fl">2.0</span>]) <span class="co"># diagonal matrix</span></span>
+<span id="cb35-8"><a href="#cb35-8"></a><span class="pp">@show</span> I <span class="co"># identity matrix</span></span>
+<span id="cb35-9"><a href="#cb35-9"></a><span class="pp">@show</span> <span class="fu">inv</span>(A); <span class="co"># inverse</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>A * b = [5, 11]
+A' = [1 3; 2 4]
+dot(b, [5.0, 2.0]) = 9.0
+b' * b = 5
+Diagonal([1.0, 2.0]) = [1.0 0.0; 0.0 2.0]
+I = UniformScaling{Bool}(true)
+inv(A) = [-1.9999999999999996 0.9999999999999998; 1.4999999999999998 -0.4999999999999999]</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="modifying-vectors" class="slide level2">
+<h2>Modifying Vectors</h2>
+<ul>
+<li>Scalars and tuples/named tuples are immutable</li>
+<li>Vectors and matrices are mutable</li>
+</ul>
+<div class="cell columns column-output-location" data-execution_count="21">
+<div class="column">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb37-1"><a href="#cb37-1"></a>A <span class="op">=</span> [<span class="fl">1</span> <span class="fl">2</span>; <span class="fl">3</span> <span class="fl">4</span>]</span>
+<span id="cb37-2"><a href="#cb37-2"></a>A[<span class="fl">1</span>, <span class="fl">1</span>] <span class="op">=</span> <span class="fl">2</span></span>
+<span id="cb37-3"><a href="#cb37-3"></a><span class="pp">@show</span> A</span>
+<span id="cb37-4"><a href="#cb37-4"></a>b <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">2</span>]</span>
+<span id="cb37-5"><a href="#cb37-5"></a>b[<span class="fl">1</span>] <span class="op">=</span> <span class="fl">2</span></span>
+<span id="cb37-6"><a href="#cb37-6"></a><span class="pp">@show</span> b</span>
+<span id="cb37-7"><a href="#cb37-7"></a>b <span class="op">.=</span> [<span class="fl">3</span>, <span class="fl">4</span>] <span class="co"># otherwise just renamed</span></span>
+<span id="cb37-8"><a href="#cb37-8"></a><span class="pp">@show</span> b</span>
+<span id="cb37-9"><a href="#cb37-9"></a>A[<span class="fl">1</span>, <span class="op">:</span>] <span class="op">.=</span> [<span class="fl">3</span>, <span class="fl">4</span>] <span class="co"># assign slice</span></span>
+<span id="cb37-10"><a href="#cb37-10"></a><span class="pp">@show</span> A;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>A = [2 2; 3 4]
+b = [2, 2]
+b = [3, 4]
+A = [3 4; 3 4]</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="learning-more" class="slide level2">
+<h2>Learning More</h2>
+<ul>
+<li>After this, most of the other material on Julia will become clear as you go</li>
+<li>This covers part of <a href="https://julia.quantecon.org/getting_started_julia/julia_essentials.html">Julia Essentials</a> and <a href="https://julia.quantecon.org/getting_started_julia/fundamental_types.html">Fundamental Types</a></li>
+<li>Other more advanced lectures, not required for this course, are
+<ul>
+<li><a href="https://julia.quantecon.org/more_julia/generic_programming.html">Introduction to Types and Generic Programming</a></li>
+<li><a href="https://julia.quantecon.org/more_julia/generic_programming.html">Generic Programming</a></li>
+<li><a href="https://julia.quantecon.org/software_engineering/tools_editors.html">Visual Studio and Other Tools</a></li>
+</ul></li>
+</ul>
+
+<div class="footer footer-default">
+
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
