@@ -44,7 +44,7 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
      -  Later sections of [Julia by Example](https://julia.quantecon.org/getting_started_julia/julia_by_example.html)
      -  [Geometric Series for Elementary Economics](https://julia.quantecon.org/tools_and_techniques/geom_series.html)
 4. **January 17th** - Start Dynamics and Introduction to Growth Models
-   - **Lecture Notes**: [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/ECON408/lectures/deterministic_dynamics.html)
+   - **Lecture Notes**: [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/ECON408/lectures/deterministic_dynamics.html) and contraction mappings in [Geometric Series, Fixed Points, and Asset Pricing](https://jlperla.github.io/ECON408/lectures/geometric_series_fixed_points.html)
    - **References**:
      -  [Dynamics in One Dimension](https://julia.quantecon.org/introduction_dynamics/scalar_dynam.html)
 5. **January 22nd** - 
