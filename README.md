@@ -47,7 +47,10 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
    - **Lecture Notes**: [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/ECON408/lectures/deterministic_dynamics.html) and contraction mappings in [Geometric Series, Fixed Points, and Asset Pricing](https://jlperla.github.io/ECON408/lectures/geometric_series_fixed_points.html)
    - **References**:
      -  [Dynamics in One Dimension](https://julia.quantecon.org/introduction_dynamics/scalar_dynam.html)
-5. **January 22nd** - 
+5. **January 22nd** - Solow Model and stability
+   - **Lecture Notes**: [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/ECON408/lectures/deterministic_dynamics.html)
+   - **References**:
+     -  [Dynamics in One Dimension](https://julia.quantecon.org/introduction_dynamics/scalar_dynam.html)
 6. **January 24th** - 
 7. **January 29th** - 
 8. **January 31st** - 
