@@ -10,8 +10,8 @@ See [here](syllabus.md) for more details, a course outline, and grading informat
 
 1. **Due Midnight PST on January 17th** - [Problem Set 0](/problem_sets/problem_set_0.ipynb)
    - This is a pass/fail problem set (i.e., hand it in you pass!) just to ensure you have setup your computer properly 
-2. **Due Midnight PST on TBD** - Problem Set 1 <!-- [Problem Set 1](/problem_sets/problem_set_1.ipynb) -->
-3. **Due Midnight PST on TBD** - Problem Set 2 <!-- [Problem Set 2](/problem_sets/problem_set_2.ipynb) -->
+2. **Due Midnight PST on January 30th** - [Problem Set 1](/problem_sets/problem_set_1.ipynb)
+3. **Due Midnight PST on February 6th** - [Problem Set 2](/problem_sets/problem_set_2.ipynb)
 4. **Due Midnight PST on TBD** - Problem Set 3 <!--  [Problem Set 3](/problem_sets/problem_set_3.ipynb) -->
 5. **Review February 26th** - Midterm Practice Problems  <!--[Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb) -->
 6. **February 28th** - MIDTERM EXAM IN CLASS
@@ -47,15 +47,18 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
    - **Lecture Notes**: [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/ECON408/lectures/deterministic_dynamics.html) and contraction mappings in [Geometric Series, Fixed Points, and Asset Pricing](https://jlperla.github.io/ECON408/lectures/geometric_series_fixed_points.html)
    - **References**:
      -  [Dynamics in One Dimension](https://julia.quantecon.org/introduction_dynamics/scalar_dynam.html)
-5. **January 22nd** - Solow Model and stability
+5. **January 22nd** - Solow Model and Stability
    - **Lecture Notes**: [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/ECON408/lectures/deterministic_dynamics.html)
    - **References**:
      -  [Dynamics in One Dimension](https://julia.quantecon.org/introduction_dynamics/scalar_dynam.html)
-6. **January 24th** - 
+6. **January 24th** - Finish Malthusian Model and start AR(1) and Ergodicity
+   - **Lecture Notes**:  [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/ECON408/lectures/deterministic_dynamics.html) and  [AR(1) Processes and Ergodicity)](https://jlperla.github.io/ECON408/lectures/ar1_ergodicity.html)
+   - **References**:
+     - [AR1 Processes](https://julia.quantecon.org/introduction_dynamics/ar1_processes.html)
 7. **January 29th** - 
 8. **January 31st** - 
 9.  **February 5th** - 
-10. **February 7th** - 
+10. **February 7th** - Review of PS1 and PS2 in class
 11. **February 12th** - 
 12. **February 14th** - 
 13. **February 19th** - SPRING BREAK
