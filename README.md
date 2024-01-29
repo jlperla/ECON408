@@ -51,12 +51,18 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
    - **Lecture Notes**: [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/ECON408/lectures/deterministic_dynamics.html)
    - **References**:
      -  [Dynamics in One Dimension](https://julia.quantecon.org/introduction_dynamics/scalar_dynam.html)
-6. **January 24th** - Finish Malthusian Model and start AR(1) and Ergodicity
-   - **Lecture Notes**:  [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/ECON408/lectures/deterministic_dynamics.html) and  [AR(1) Processes and Ergodicity)](https://jlperla.github.io/ECON408/lectures/ar1_ergodicity.html)
+6. **January 24th** - Finish Malthusian Model and start AR(1) and Stochastic Dynamics
+   - **Lecture Notes**:  [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/ECON408/lectures/deterministic_dynamics.html) and  [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/ECON408/lectures/stochastic_dynamics.html)
    - **References**:
      - [AR1 Processes](https://julia.quantecon.org/introduction_dynamics/ar1_processes.html)
      - [LLN and CLT](https://julia.quantecon.org/tools_and_techniques/lln_clt.html)
-7. **January 29th** - 
+     - [Continuous State Markov Chains](https://julia.quantecon.org/tools_and_techniques/stationary_densities.html)
+7. **January 29th** - Stochastic Dynamics, AR(1), ARMA, and Ergodicity
+   - **Lecture Notes**:  [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/ECON408/lectures/stochastic_dynamics.html)
+   - **References**:
+     - [AR1 Processes](https://julia.quantecon.org/introduction_dynamics/ar1_processes.html)
+     - [LLN and CLT](https://julia.quantecon.org/tools_and_techniques/lln_clt.html)
+     - [Continuous State Markov Chains](https://julia.quantecon.org/tools_and_techniques/stationary_densities.html)
 8. **January 31st** - 
 9.  **February 5th** - 
 10. **February 7th** - Review of PS1 and PS2 in class
