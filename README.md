@@ -63,7 +63,10 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
      - [AR1 Processes](https://julia.quantecon.org/introduction_dynamics/ar1_processes.html)
      - [LLN and CLT](https://julia.quantecon.org/tools_and_techniques/lln_clt.html)
      - [Continuous State Markov Chains](https://julia.quantecon.org/tools_and_techniques/stationary_densities.html)
-8. **January 31st** - 
+8. **January 31st** - Finish Nonlinear Stochastic Dynamics and Start Wealth Inequality
+   - **Lecture Notes**:  [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/ECON408/lectures/stochastic_dynamics.html) and  [Wealth Distribution, Multiplicative Processes, and Inequality](https://jlperla.github.io/ECON408/lectures/wealth_distribution.html)
+   - **References**:
+     -  [Wealth Distribution Dynamics](https://julia.quantecon.org/introduction_dynamics/wealth_dynamics.html)
 9.  **February 5th** - 
 10. **February 7th** - Review of PS1 and PS2 in class
 11. **February 12th** - 
