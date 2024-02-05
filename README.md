@@ -12,13 +12,14 @@ See [here](syllabus.md) for more details, a course outline, and grading informat
    - This is a pass/fail problem set (i.e., hand it in you pass!) just to ensure you have setup your computer properly 
 2. **Due Midnight PST on January 30th** - [Problem Set 1](/problem_sets/problem_set_1.ipynb)
 3. **Due Midnight PST on February 6th** - [Problem Set 2](/problem_sets/problem_set_2.ipynb)
-4. **Due Midnight PST on TBD** - Problem Set 3 <!--  [Problem Set 3](/problem_sets/problem_set_3.ipynb) -->
-5. **Review February 26th** - Midterm Practice Problems  <!--[Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb) -->
-6. **February 28th** - MIDTERM EXAM IN CLASS
-7. **Due Midnight PST on TBD** -  Problem Set 4 <!-- [Problem Set 4](/problem_sets/problem_set_4.ipynb) -->
-8. **Due Midnight PST on TBD** -  Problem Set 5 <!-- [Problem Set 5](/problem_sets/problem_set_5.ipynb) -->
-9.  **Due Midnight PST on TBD** -  Problem Set 6 <!-- [Problem Set 6](/problem_sets/problem_set_6.ipynb) -->
-10. **Reviewing TBD** - Final Practice Problems <!-- [Final Practice Problems](/problem_sets/final_practice_problems.ipynb) -->
+4. **Due Midnight PST on February 13th** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
+5. **Due Midnight PST on TBD** -  Problem Set 4 <!-- [Problem Set 4](/problem_sets/problem_set_4.ipynb) -->
+6. **Review February 26th** - Midterm Practice Problems  <!--[Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb) -->
+7. **February 28th** - MIDTERM EXAM IN CLASS
+8. **Due Midnight PST on TBD** -  Problem Set 4 <!-- [Problem Set 4](/problem_sets/problem_set_4.ipynb) -->
+9. **Due Midnight PST on TBD** -  Problem Set 5 <!-- [Problem Set 5](/problem_sets/problem_set_5.ipynb) -->
+10.  **Due Midnight PST on TBD** -  Problem Set 6 <!-- [Problem Set 6](/problem_sets/problem_set_6.ipynb) -->
+11. **Reviewing TBD** - Final Practice Problems <!-- [Final Practice Problems](/problem_sets/final_practice_problems.ipynb) -->
 
 All problem set solutions should be submitted on Canvas directly as a `.ipynb` file with instructions embedded.
 
@@ -64,10 +65,13 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
      - [LLN and CLT](https://julia.quantecon.org/tools_and_techniques/lln_clt.html)
      - [Continuous State Markov Chains](https://julia.quantecon.org/tools_and_techniques/stationary_densities.html)
 8. **January 31st** - Finish Nonlinear Stochastic Dynamics and Start Wealth Inequality
-   - **Lecture Notes**:  [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/ECON408/lectures/stochastic_dynamics.html) and  [Wealth Distribution, Multiplicative Processes, and Inequality](https://jlperla.github.io/ECON408/lectures/wealth_distribution.html)
+   - **Lecture Notes**:  [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/ECON408/lectures/stochastic_dynamics.html) and  [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/ECON408/lectures/wealth_distribution_firm_dynamics.html)
    - **References**:
      -  [Wealth Distribution Dynamics](https://julia.quantecon.org/introduction_dynamics/wealth_dynamics.html)
-9.  **February 5th** - 
+9.  **February 5th** - Firm Dynamics, Lorenz Curves and Power Laws
+   - **Lecture Notes**:  [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/ECON408/lectures/wealth_distribution_firm_dynamics.html)
+   - **References**:
+     -  [Wealth Distribution Dynamics](https://julia.quantecon.org/introduction_dynamics/wealth_dynamics.html)
 10. **February 7th** - Review of PS1 and PS2 in class
 11. **February 12th** - 
 12. **February 14th** - 
