@@ -68,13 +68,21 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
    - **Lecture Notes**:  [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/ECON408/lectures/stochastic_dynamics.html) and  [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/ECON408/lectures/wealth_distribution_firm_dynamics.html)
    - **References**:
      -  [Wealth Distribution Dynamics](https://julia.quantecon.org/introduction_dynamics/wealth_dynamics.html)
-9.  **February 5th** - Firm Dynamics, Lorenz Curves and Power Laws
+9. **February 5th** - Firm Dynamics, Lorenz Curves and Power Laws
    - **Lecture Notes**:  [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/ECON408/lectures/wealth_distribution_firm_dynamics.html)
    - **References**:
      -  [Wealth Distribution Dynamics](https://julia.quantecon.org/introduction_dynamics/wealth_dynamics.html)
 10. **February 7th** - Review of PS1 and PS2 in class
-11. **February 12th** - 
-12. **February 14th** - 
+11. **February 12th** - Finish Wealth Distribution, Firm Dynamics, and Inequality and start Linear State Space Models
+    - **Lecture Notes**:  [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/ECON408/lectures/wealth_distribution_firm_dynamics.html) and [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/ECON408/lectures/linear_state_space_models.html)
+    - **References**:
+      - [Wealth Distribution Dynamics](https://julia.quantecon.org/introduction_dynamics/wealth_dynamics.html)
+      - [Linear State Space Models](https://julia.quantecon.org/introduction_dynamics/linear_models.html#the-linear-state-space-model)
+12. **February 14th** - Linear State Space Models, Asset Pricing, and the Kalman Filter
+    - **Lecture Notes**: [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/ECON408/lectures/linear_state_space_models.html)
+    - **References**:
+      - [Linear State Space Models](https://julia.quantecon.org/introduction_dynamics/linear_models.html#the-linear-state-space-model)
+      - [A First Look at the Kalman Filter](https://julia.quantecon.org/introduction_dynamics/kalman.html)
 13. **February 19th** - SPRING BREAK
 14. **February 21st** - SPRING BREAK
 15. **February 26th** - Midterm Review
