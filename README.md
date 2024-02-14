@@ -84,7 +84,7 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
       - [A First Look at the Kalman Filter](https://julia.quantecon.org/introduction_dynamics/kalman.html)
 13. **February 19th** - SPRING BREAK
 14. **February 21st** - SPRING BREAK
-15. **February 26th** - Midterm Review
+15. **February 26th** - Midterm Review + Practice Exam Logistics
 16. **February 28th** - Midterm
 17. **March 4th** - 
 18. **March 6th** - 
