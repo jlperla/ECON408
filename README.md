@@ -13,13 +13,12 @@ See [here](syllabus.md) for more details, a course outline, and grading informat
 2. **Due Midnight PST on January 30th** - [Problem Set 1](/problem_sets/problem_set_1.ipynb)
 3. **Due Midnight PST on February 6th** - [Problem Set 2](/problem_sets/problem_set_2.ipynb)
 4. **Due Midnight PST on February 13th** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
-5. **Due Midnight PST on TBD** -  Problem Set 4 <!-- [Problem Set 4](/problem_sets/problem_set_4.ipynb) -->
 6. **Review February 26th** - Midterm Practice Problems  <!--[Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb) -->
-7. **February 28th** - MIDTERM EXAM IN CLASS
-8. **Due Midnight PST on TBD** -  Problem Set 4 <!-- [Problem Set 4](/problem_sets/problem_set_4.ipynb) -->
-9. **Due Midnight PST on TBD** -  Problem Set 5 <!-- [Problem Set 5](/problem_sets/problem_set_5.ipynb) -->
-10.  **Due Midnight PST on TBD** -  Problem Set 6 <!-- [Problem Set 6](/problem_sets/problem_set_6.ipynb) -->
-11. **Reviewing TBD** - Final Practice Problems <!-- [Final Practice Problems](/problem_sets/final_practice_problems.ipynb) -->
+6. **February 28th** - MIDTERM EXAM IN CLASS
+7. **Due Midnight PST on TBD** -  Problem Set 4 <!-- [Problem Set 4](/problem_sets/problem_set_4.ipynb) -->
+8. **Due Midnight PST on TBD** -  Problem Set 5 <!-- [Problem Set 5](/problem_sets/problem_set_5.ipynb) -->
+9.  **Due Midnight PST on TBD** -  Problem Set 6 <!-- [Problem Set 6](/problem_sets/problem_set_6.ipynb) -->
+10. **Reviewing TBD** - Final Practice Problems <!-- [Final Practice Problems](/problem_sets/final_practice_problems.ipynb) -->
 
 All problem set solutions should be submitted on Canvas directly as a `.ipynb` file with instructions embedded.
 
