@@ -13,7 +13,7 @@ See [here](syllabus.md) for more details, a course outline, and grading informat
 2. **Due Midnight PST on January 30th** - [Problem Set 1](/problem_sets/problem_set_1.ipynb)
 3. **Due Midnight PST on February 6th** - [Problem Set 2](/problem_sets/problem_set_2.ipynb)
 4. **Due Midnight PST on February 13th** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
-6. **Review February 26th** - Midterm Practice Problems  <!--[Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb) -->
+5. **Review February 26th** - [Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb)
 6. **February 28th** - MIDTERM EXAM IN CLASS
 7. **Due Midnight PST on TBD** -  Problem Set 4 <!-- [Problem Set 4](/problem_sets/problem_set_4.ipynb) -->
 8. **Due Midnight PST on TBD** -  Problem Set 5 <!-- [Problem Set 5](/problem_sets/problem_set_5.ipynb) -->
