@@ -86,14 +86,20 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
 14. **February 21st** - SPRING BREAK
 15. **February 26th** - Midterm Review + Practice Exam Logistics
 16. **February 28th** - Midterm
-17. **March 4th** - 
-18. **March 6th** - 
+17. **March 4th** - Optimal Consumption and Savings Decisions and the Permanent Income Model
+    - **Lecture Notes**: [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/ECON408/lectures/permanent_income.html)
+    - **References**:
+      - [Optimal Savings I: The Permanent Income Model](https://julia.quantecon.org/dynamic_programming/perm_income.html)
+18. **March 6th** - Finish the Permanent Income Model
+    - **Lecture Notes**: [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/ECON408/lectures/permanent_income.html)
+    - **References**:
+      - [Optimal Savings I: The Permanent Income Model](https://julia.quantecon.org/dynamic_programming/perm_income.html)
 19. **March 11th** - 
 20. **March 13th** - 
 21. **March 18th** - 
 22. **March 20th** - 
 23. **March 25th** - 
-24. **March 27th** - 
+24. **March 27th** - Guest Lecture by Paul Beaudry
 25. **April 1st** - STATUTORY HOLIDAY
 26. **April 3rd** - 
 27. **April 8th** - 
