@@ -86,18 +86,20 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
 14. **February 21st** - SPRING BREAK
 15. **February 26th** - Midterm Review + Practice Exam Logistics
 16. **February 28th** - Midterm
-17. **March 4th** - Optimal Consumption and Savings Decisions and the Permanent Income Model
+17. **March 4th** - Last minute class cancellation
+18. **March 6th** - Optimal Consumption and Savings Decisions and the Permanent Income Model
     - **Lecture Notes**: [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/ECON408/lectures/permanent_income.html)
     - **References**:
       - [Optimal Savings I: The Permanent Income Model](https://julia.quantecon.org/dynamic_programming/perm_income.html)
-18. **March 6th** - Finish the Permanent Income Model
-    - **Lecture Notes**: [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/ECON408/lectures/permanent_income.html)
+19. **March 11th** - Finish Stochastic Version of the Permanent Income Model and Start Markov Chains
+    - **Lecture Notes**: [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/ECON408/lectures/permanent_income.html) and [Markov Chains with Applications to Unemployment and Asset Pricing"](https://jlperla.github.io/ECON408/lectures/markov_chains_applications.html)
     - **References**:
       - [Optimal Savings I: The Permanent Income Model](https://julia.quantecon.org/dynamic_programming/perm_income.html)
-19. **March 11th** - 
-20. **March 13th** - 
-21. **March 18th** - 
-22. **March 20th** - 
+      - [Finite Markov Chains](https://julia.quantecon.org/introduction_dynamics/finite_markov.html)
+      - [A Lake Model of Employment and Unemployment](https://julia.quantecon.org/multi_agent_models/lake_model.html)
+20. **March 13th** - Finish Markov Chains and Unemployment
+21. **March 18th** - Search
+22. **March 20th** - Search
 23. **March 25th** - 
 24. **March 27th** - Guest Lecture by Paul Beaudry
 25. **April 1st** - STATUTORY HOLIDAY
