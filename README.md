@@ -97,9 +97,18 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
       - [Optimal Savings I: The Permanent Income Model](https://julia.quantecon.org/dynamic_programming/perm_income.html)
       - [Finite Markov Chains](https://julia.quantecon.org/introduction_dynamics/finite_markov.html)
       - [A Lake Model of Employment and Unemployment](https://julia.quantecon.org/multi_agent_models/lake_model.html)
-20. **March 13th** - Finish Markov Chains and Unemployment
-21. **March 18th** - Search
-22. **March 20th** - Search
+20. **March 13th** - Finish Markov Chains and Unemployment and Start Search
+    - **Lecture Notes**: [Markov Chains with Applications to Unemployment and Asset Pricing"](https://jlperla.github.io/ECON408/lectures/markov_chains_applications.html) and [Search](https://jlperla.github.io/ECON408/lectures/search.html)
+    - **References**:
+      - [Finite Markov Chains](https://julia.quantecon.org/introduction_dynamics/finite_markov.html)
+      - [A Lake Model of Employment and Unemployment](https://julia.quantecon.org/multi_agent_models/lake_model.html)
+21. **March 18th** - The McCall Search Model and its Solution
+    - **Lecture Notes**: [Search](https://jlperla.github.io/ECON408/lectures/search.html)
+    - **References**:
+      - [Job Search I: The McCall Search Model](https://julia.quantecon.org/dynamic_programming/mccall_model.html)
+      - [Job Search II: Search and Separation](https://julia.quantecon.org/dynamic_programming/mccall_model_with_separation.html)
+      - [A Lake Model of Employment and Unemployment](https://julia.quantecon.org/multi_agent_models/lake_model.html)
+22. **March 20th** - 
 23. **March 25th** - 
 24. **March 27th** - Guest Lecture by Paul Beaudry
 25. **April 1st** - STATUTORY HOLIDAY

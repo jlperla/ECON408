@@ -505,7 +505,7 @@ Jesse Perla
 </ul></li>
 </ul></li>
 </ul>
-<div class="cell" data-execution_count="1">
+<div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">using</span> <span class="bu">Distributions</span>, <span class="bu">Plots</span>, <span class="bu">LaTeXStrings</span>, <span class="bu">LinearAlgebra</span>, <span class="bu">Statistics</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">using</span> <span class="bu">Plots.PlotMeasures</span>, <span class="bu">QuantEcon</span>, <span class="bu">StatsPlots</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">default</span>(;legendfontsize<span class="op">=</span><span class="fl">16</span>, linewidth<span class="op">=</span><span class="fl">2</span>, tickfontsize<span class="op">=</span><span class="fl">12</span>,</span>
@@ -1273,7 +1273,7 @@ c_{t+1} - c_t = (1-\beta)\sigma w_{t+1}
 </section>
 <section id="direct-simulation" class="slide level2">
 <h2>Direct Simulation</h2>
-<div class="cell" data-execution_count="2">
+<div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">function</span> <span class="fu">simulate_iid_income</span>(p, T; w <span class="op">=</span> <span class="fu">randn</span>(T))</span>
 <span id="cb2-2"><a href="#cb2-2"></a>    w_sum <span class="op">=</span> <span class="fu">cumsum</span>(w) <span class="co">#(w_1, w_1 + w_2, w_1 + w_2 + w_3, ... sum_{j=1}^T w_j))    </span></span>
 <span id="cb2-3"><a href="#cb2-3"></a>    c <span class="op">=</span> p.mu <span class="op">.+</span> (<span class="fl">1</span> <span class="op">-</span> p.beta) <span class="op">*</span> p.sigma  <span class="op">*</span> w_sum <span class="co"># (c_1, c_2, ... c_T)</span></span>
@@ -1293,7 +1293,7 @@ c_{t+1} - c_t = (1-\beta)\sigma w_{t+1}
 </div>
 
 </section>
-<section id="direct-simulation-output" class="slide level2 output-location-slide"><h2>Direct Simulation</h2><div class="cell output-location-slide" data-execution_count="2">
+<section id="direct-simulation-output" class="slide level2 output-location-slide"><h2>Direct Simulation</h2><div class="cell output-location-slide" data-execution_count="3">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <!--?xml version="1.0" encoding="utf-8"?-->
 <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="960" height="480" viewbox="0 0 3840 1920">
@@ -1354,7 +1354,7 @@ c_{t+1} - c_t = (1-\beta)\sigma w_{t+1}
 </div>
 </div></section><section id="lss-formulation" class="slide level2">
 <h2>LSS Formulation</h2>
-<div class="cell columns column-output-location" data-execution_count="3">
+<div class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1"></a>A <span class="op">=</span> [<span class="fl">0</span> <span class="fl">0</span>; <span class="fl">0</span> <span class="fl">1</span>]</span>
 <span id="cb3-2"><a href="#cb3-2"></a>G <span class="op">=</span> [p.sigma p.mu]</span>
@@ -1488,7 +1488,7 @@ F_{t+1} - F_t = \sigma w_{2t+1}
 </section>
 <section id="iteration-and-irfs" class="slide level2">
 <h2>Iteration and IRFs</h2>
-<div class="cell" data-execution_count="4">
+<div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">function</span> <span class="fu">iterate_LSS</span>(A, C, G, x_0, T; w <span class="op">=</span> <span class="fu">randn</span>(<span class="fu">size</span>(C,<span class="fl">2</span>), T))</span>
 <span id="cb4-2"><a href="#cb4-2"></a>    x <span class="op">=</span> <span class="fu">zeros</span>(<span class="fu">length</span>(x_0), T <span class="op">+</span> <span class="fl">1</span>)</span>
 <span id="cb4-3"><a href="#cb4-3"></a>    x[<span class="op">:</span>, <span class="fl">1</span>] <span class="op">=</span> x_0</span>
@@ -1509,7 +1509,7 @@ F_{t+1} - F_t = \sigma w_{2t+1}
 </section>
 <section id="lss-formulation-1" class="slide level2">
 <h2>LSS Formulation</h2>
-<div class="cell columns column-output-location" data-execution_count="5">
+<div class="cell columns column-output-location" data-execution_count="6">
 <div class="column">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1"></a>sigma_1, sigma_2 <span class="op">=</span> <span class="fl">0.15</span>, <span class="fl">0.15</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>beta <span class="op">=</span> <span class="fl">1.0</span><span class="op">/</span>(<span class="fl">1.0</span> <span class="op">+</span> <span class="fl">0.05</span>)</span>
@@ -1581,7 +1581,7 @@ F_{t+1} - F_t = \sigma w_{2t+1}
 </section>
 <section id="irfs-for-permanent-shock" class="slide level2">
 <h2>IRFs for Permanent Shock</h2>
-<div class="cell columns column-output-location" data-execution_count="6">
+<div class="cell columns column-output-location" data-execution_count="7">
 <div class="column">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1"></a>w_1 <span class="op">=</span> [<span class="fl">1.0</span>, <span class="fl">0.0</span>]</span>
 <span id="cb6-2"><a href="#cb6-2"></a>h_x, h_y <span class="op">=</span> <span class="fu">IRF</span>(A_tilde, C_tilde,</span>
@@ -1643,7 +1643,7 @@ F_{t+1} - F_t = \sigma w_{2t+1}
 </section>
 <section id="irfs-for-transitory-shock" class="slide level2">
 <h2>IRFs for Transitory Shock</h2>
-<div class="cell columns column-output-location" data-execution_count="7">
+<div class="cell columns column-output-location" data-execution_count="8">
 <div class="column">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1"></a>w_1 <span class="op">=</span> [<span class="fl">0.0</span>, <span class="fl">1.0</span>]</span>
 <span id="cb7-2"><a href="#cb7-2"></a>h_x, h_y <span class="op">=</span> <span class="fu">IRF</span>(A_tilde, C_tilde,</span>
