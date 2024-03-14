@@ -102,19 +102,19 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
     - **References**:
       - [Finite Markov Chains](https://julia.quantecon.org/introduction_dynamics/finite_markov.html)
       - [A Lake Model of Employment and Unemployment](https://julia.quantecon.org/multi_agent_models/lake_model.html)
-21. **March 18th** - The McCall Search Model and its Solution
+21. **March 18th** - The McCall Search Model and Dynamic Programming
     - **Lecture Notes**: [Search](https://jlperla.github.io/ECON408/lectures/search.html)
     - **References**:
       - [Job Search I: The McCall Search Model](https://julia.quantecon.org/dynamic_programming/mccall_model.html)
       - [Job Search II: Search and Separation](https://julia.quantecon.org/dynamic_programming/mccall_model_with_separation.html)
       - [A Lake Model of Employment and Unemployment](https://julia.quantecon.org/multi_agent_models/lake_model.html)
-22. **March 20th** - 
+22. **March 20th** - Risk-Aversion, Asset Pricing, and "Lucas Trees"
 23. **March 25th** - Problem Set and Exam Review
 24. **March 27th** - Guest Lecture by Paul Beaudry
 25. **April 1st** - STATUTORY HOLIDAY
-26. **April 3rd** - 
-27. **April 8th** - 
-28. **April 10th** - 
+26. **April 3rd** - More on Asset Pricing and Option Pricing
+27. **April 8th** - Rational Expectations Equilibrium with Firm Dynamics (and the big-K, little-k trick)
+28. **April 10th** - FInish Rational Expectations, and review for final
 
 
 ## Software and Programming Environment
