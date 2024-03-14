@@ -15,7 +15,7 @@ See [here](syllabus.md) for more details, a course outline, and grading informat
 4. **Due Midnight PST on February 13th** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
 5. **Review February 26th** - [Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb)
 6. **February 28th** - MIDTERM EXAM IN CLASS
-7. **Due Midnight PST on TBD** -  Problem Set 4 <!-- [Problem Set 4](/problem_sets/problem_set_4.ipynb) -->
+7. **Due Midnight PST on March 24th** -  [Problem Set 4](/problem_sets/problem_set_4.ipynb)
 8. **Due Midnight PST on TBD** -  Problem Set 5 <!-- [Problem Set 5](/problem_sets/problem_set_5.ipynb) -->
 9.  **Due Midnight PST on TBD** -  Problem Set 6 <!-- [Problem Set 6](/problem_sets/problem_set_6.ipynb) -->
 10. **Reviewing TBD** - Final Practice Problems <!-- [Final Practice Problems](/problem_sets/final_practice_problems.ipynb) -->
@@ -109,7 +109,7 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
       - [Job Search II: Search and Separation](https://julia.quantecon.org/dynamic_programming/mccall_model_with_separation.html)
       - [A Lake Model of Employment and Unemployment](https://julia.quantecon.org/multi_agent_models/lake_model.html)
 22. **March 20th** - 
-23. **March 25th** - 
+23. **March 25th** - Problem Set and Exam Review
 24. **March 27th** - Guest Lecture by Paul Beaudry
 25. **April 1st** - STATUTORY HOLIDAY
 26. **April 3rd** - 
