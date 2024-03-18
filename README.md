@@ -103,7 +103,7 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
       - [Finite Markov Chains](https://julia.quantecon.org/introduction_dynamics/finite_markov.html)
       - [A Lake Model of Employment and Unemployment](https://julia.quantecon.org/multi_agent_models/lake_model.html)
 21. **March 18th** - The McCall Search Model and Dynamic Programming
-    - **Lecture Notes**: [Search](https://jlperla.github.io/ECON408/lectures/search.html)
+    - **Lecture Notes**: [Search and Dynamic Programming](https://jlperla.github.io/ECON408/lectures/search_dynamic_programming.html)
     - **References**:
       - [Job Search I: The McCall Search Model](https://julia.quantecon.org/dynamic_programming/mccall_model.html)
       - [Job Search II: Search and Separation](https://julia.quantecon.org/dynamic_programming/mccall_model_with_separation.html)
