@@ -108,17 +108,19 @@ See [here](https://jlperla.github.io/ECON408/index.html) for links to all materi
       - [Job Search I: The McCall Search Model](https://julia.quantecon.org/dynamic_programming/mccall_model.html)
       - [Job Search II: Search and Separation](https://julia.quantecon.org/dynamic_programming/mccall_model_with_separation.html)
       - [A Lake Model of Employment and Unemployment](https://julia.quantecon.org/multi_agent_models/lake_model.html)
-22. **March 20th** - Risk-Aversion, Asset Pricing, and "Lucas Trees"
-    - **Lecture Notes**: TBD
+22. **March 20th** - Asset Pricing, and "Lucas Trees"
+    - **Lecture Notes**: [Asset Pricing, Lucas Trees, and Options](https://jlperla.github.io/ECON408/lectures/asset_pricing_lucas_trees.html)
     - **References**:
       - [Asset Pricing I: Finite State Models](https://julia.quantecon.org/multi_agent_models/markov_asset.html)
+      - [Asset Pricing II: The Lucas Asset Pricing Model](https://julia.quantecon.org/multi_agent_models/lucas_model.html)
 23. **March 25th** - Problem Set and Exam Review
 24. **March 27th** - Guest Lecture by Paul Beaudry
 25. **April 1st** - STATUTORY HOLIDAY
 26. **April 3rd** - More on Asset Pricing and Option Pricing
-    - **Lecture Notes**: TBD
+    - **Lecture Notes**: [Asset Pricing, Lucas Trees, and Options](https://jlperla.github.io/ECON408/lectures/asset_pricing_lucas_trees.html)
     - **References**:
       - [Asset Pricing I: Finite State Models](https://julia.quantecon.org/multi_agent_models/markov_asset.html)
+      - [Asset Pricing II: The Lucas Asset Pricing Model](https://julia.quantecon.org/multi_agent_models/lucas_model.html)
 27. **April 8th** - Rational Expectations Equilibrium with Firm Dynamics (and the big-K, little-k trick)
     - **Lecture Notes**: TBD
     - **References**:
