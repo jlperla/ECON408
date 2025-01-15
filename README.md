@@ -8,9 +8,9 @@ Additional course materials are in:
 ## Problem Sets and Exams
 1. **Due Midnight PST on January 19** - [Problem Set 0](/problem_sets/problem_set_0.ipynb)
    - This is a pass/fail problem set (i.e., hand it in you pass!) just to ensure you have setup your computer properly
-2. **February 26** - MIDTERM EXAM IN CLASS
+2. **Due Midnight PST on January 26** - [Problem Set 1](/problem_sets/problem_set_1.ipynb)
+3. **February 26** - MIDTERM EXAM IN CLASS
 <!--
-1. **Due Midnight PST on January 30** - [Problem Set 1](/problem_sets/problem_set_1.ipynb)
 2. **Due Midnight PST on February 6** - [Problem Set 2](/problem_sets/problem_set_2.ipynb)
 3. **Due Midnight PST on February 13** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
 4. **Review February 26** - [Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb)
@@ -24,7 +24,7 @@ All problem set solutions should be submitted on Canvas directly as a `.ipynb` f
 ## Schedule
 1. **January 6** - [Course Overview and Computational Environment](https://jlperla.github.io/undergrad_computational_macro/slides/intro.html)
 2. **January 8** - [Geometric Series, Fixed Points, and Asset Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/geometric_series_fixed_points.html)
-3. **January 13** - [Geometric Series, Fixed Points, and Asset Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/geometric_series_fixed_points.html)
+3. **January 13** - [Geometric Series, Fixed Points, and Asset Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/geometric_series_fixed_points.html) and started [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/undergrad_computational_macro/slides/deterministic_dynamics.html)
 4. **January 15** - [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/undergrad_computational_macro/slides/deterministic_dynamics.html)
 5. **January 20** - [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/undergrad_computational_macro/slides/deterministic_dynamics.html)
 6. **January 22** - [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/undergrad_computational_macro/slides/stochastic_dynamics.html)
