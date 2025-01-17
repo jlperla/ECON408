@@ -5,6 +5,12 @@ Additional course materials are in:
 - [Jupyter Notebooks of Slides](https://github.com/jlperla/undergrad_computational_macro_notebooks?tab=readme-ov-file)
 - [Syllabus](https://jlperla.github.io/undergrad_computational_macro/pages/syllabus.html)
 
+To setup this repository for editing problem sets:
+- First install access to the main notebooks with [[Setup Instructions](https://jlperla.github.io/undergrad_computational_macro/pages/setup.html)]
+- Then with this project cloned
+  - Run a Julia terminal with `<Cmd+Shift-P>` then `Julia: Start REPL` and do `]instantiate`
+  - Or `julia --project` then `]instantiate`
+
 ## Problem Sets and Exams
 1. **Due Midnight PST on January 19** - [Problem Set 0](/problem_sets/problem_set_0.ipynb)
    - This is a pass/fail problem set (i.e., hand it in you pass!) just to ensure you have setup your computer properly
