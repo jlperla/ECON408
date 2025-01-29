@@ -16,14 +16,15 @@ To setup this repository for editing problem sets:
    - This is a pass/fail problem set (i.e., hand it in you pass!) just to ensure you have setup your computer properly
 2. **Due Midnight PST on January 26** - [Problem Set 1](/problem_sets/problem_set_1.ipynb)
 3. **Due Midnight PST on February 2** - [Problem Set 2](/problem_sets/problem_set_2.ipynb)
-4. **February 26** - MIDTERM EXAM IN CLASS
+4. **Due Midnight PST on February 23** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
+5. **February 26** - MIDTERM EXAM IN CLASS
 <!--
-2. **Due Midnight PST on February 13** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
-3. **Review February 26** - [Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb)
-4. **February 28** - MIDTERM EXAM IN CLASS
-5. **Due Midnight PST on March 24** -  [Problem Set 4](/problem_sets/problem_set_4.ipynb)
-6. **Due Midnight PST on April 9** -  [Problem Set 5](/problem_sets/problem_set_5.ipynb)
-7. **Reviewing April 10th/12** - [Final Practice Problems](/problem_sets/final_practice_problems.ipynb)
+1. **Due Midnight PST on February 13** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
+2. **Review February 26** - [Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb)
+3. **February 28** - MIDTERM EXAM IN CLASS
+4. **Due Midnight PST on March 24** -  [Problem Set 4](/problem_sets/problem_set_4.ipynb)
+5. **Due Midnight PST on April 9** -  [Problem Set 5](/problem_sets/problem_set_5.ipynb)
+6. **Reviewing April 10th/12** - [Final Practice Problems](/problem_sets/final_practice_problems.ipynb)
 -->
 All problem set solutions should be submitted on Canvas directly as a `.ipynb` file with instructions embedded.
 
@@ -35,7 +36,7 @@ All problem set solutions should be submitted on Canvas directly as a `.ipynb` f
 5. **January 20** - [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/undergrad_computational_macro/slides/deterministic_dynamics.html)
 6. **January 22** - Finish [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/undergrad_computational_macro/slides/deterministic_dynamics.html) and start [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/undergrad_computational_macro/slides/stochastic_dynamics.html)
 7. **January 27** - [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/undergrad_computational_macro/slides/stochastic_dynamics.html)
-8. **January 29** - [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html)
+8. **January 29** - [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/undergrad_computational_macro/slides/stochastic_dynamics.html) and start[Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html)
 9. **February 3** - Problem Set Review
 10. **February 5** - [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html)
 11. **February 10** - [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html) and  [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/undergrad_computational_macro/slides/linear_state_space_models.html)
