@@ -36,16 +36,16 @@ All problem set solutions should be submitted on Canvas directly as a `.ipynb` f
 5. **January 20** - [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/undergrad_computational_macro/slides/deterministic_dynamics.html)
 6. **January 22** - Finish [Deterministic Dynamics and Introduction to Growth Models](https://jlperla.github.io/undergrad_computational_macro/slides/deterministic_dynamics.html) and start [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/undergrad_computational_macro/slides/stochastic_dynamics.html)
 7. **January 27** - [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/undergrad_computational_macro/slides/stochastic_dynamics.html)
-8. **January 29** - [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/undergrad_computational_macro/slides/stochastic_dynamics.html) and start[Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html)
+8. **January 29** - [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/undergrad_computational_macro/slides/stochastic_dynamics.html)
 9. **February 3** - Problem Set Review
-10. **February 5** - [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html)
-11. **February 10** - [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html) and  [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/undergrad_computational_macro/slides/linear_state_space_models.html)
-12. **February 12** - [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/undergrad_computational_macro/slides/linear_state_space_models.html)
+10. **February 5** - [Stochastic Dynamics, AR(1) Processes, and Ergodicity](https://jlperla.github.io/undergrad_computational_macro/slides/stochastic_dynamics.html)
+11. **February 10** - [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html)
+12. **February 12** - [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html)
 13. **February 17** - SPRING BREAK
 14. **February 19** - SPRING BREAK
 15. **February 24** - Midterm Review + Practice Exam Logistics
 16. **February 26** - Midterm
-17. **March 3** - [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/undergrad_computational_macro/slides/permanent_income.html)
+17. **March 3** - [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/undergrad_computational_macro/slides/linear_state_space_models.html)
 18. **March 5** - [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/undergrad_computational_macro/slides/permanent_income.html)
 19. **March 10** - [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/undergrad_computational_macro/slides/permanent_income.html) and [Markov Chains with Applications to Unemployment and Asset Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/markov_chains_applications.html)
 20. **March 12** - [Markov Chains with Applications to Unemployment and Asset Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/markov_chains_applications.html) and [Search](https://jlperla.github.io/undergrad_computational_macro/slides/search.html)
