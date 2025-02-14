@@ -17,7 +17,8 @@ To setup this repository for editing problem sets:
 2. **Due Midnight PST on January 26** - [Problem Set 1](/problem_sets/problem_set_1.ipynb)
 3. **Due Midnight PST on February 2** - [Problem Set 2](/problem_sets/problem_set_2.ipynb)
 4. **Due Midnight PST on February 23** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
-5. **February 26** - MIDTERM EXAM IN CLASS
+5. **NOT TO HAND IN** - [Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb)
+6. **February 26** - MIDTERM EXAM IN CLASS  
 <!--
 1. **Due Midnight PST on February 13** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
 2. **Review February 26** - [Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb)
@@ -43,7 +44,7 @@ All problem set solutions should be submitted on Canvas directly as a `.ipynb` f
 12. **February 12** - [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html)
 13. **February 17** - SPRING BREAK
 14. **February 19** - SPRING BREAK
-15. **February 24** - Midterm Review + Practice Exam Logistics
+15. **February 24** - Problem Set + Midterm Review Quetsions + Practice Exam Logistics 
 16. **February 26** - Midterm
 17. **March 3** - [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/undergrad_computational_macro/slides/linear_state_space_models.html)
 18. **March 5** - [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/undergrad_computational_macro/slides/permanent_income.html)
