@@ -19,14 +19,11 @@ To setup this repository for editing problem sets:
 4. **Due Midnight PST on February 23** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
 5. **NOT TO HAND IN** - [Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb)
 6. **February 26** - MIDTERM EXAM IN CLASS  
-<!--
-1. **Due Midnight PST on February 13** - [Problem Set 3](/problem_sets/problem_set_3.ipynb)
-2. **Review February 26** - [Midterm Practice Problems](/problem_sets/midterm_practice_problems.ipynb)
-3. **February 28** - MIDTERM EXAM IN CLASS
-4. **Due Midnight PST on March 24** -  [Problem Set 4](/problem_sets/problem_set_4.ipynb)
-5. **Due Midnight PST on April 9** -  [Problem Set 5](/problem_sets/problem_set_5.ipynb)
-6. **Reviewing April 10th/12** - [Final Practice Problems](/problem_sets/final_practice_problems.ipynb)
--->
+7. **Due Midnight PST on March 20** -  [Problem Set 4](/problem_sets/problem_set_4.ipynb)
+8. **Due Midnight PST on March 30** -  [Problem Set 5](/problem_sets/problem_set_5.ipynb)
+9. **Due Midnight PST on April 6** -  [Problem Set 6](/problem_sets/problem_set_6.ipynb)
+10. **NOT TO HAND IN** - [Final Practice Problems](/problem_sets/final_practice_problems.ipynb) Link TBD
+
 All problem set solutions should be submitted on Canvas directly as a `.ipynb` file with instructions embedded.
 
 ## Schedule
@@ -47,13 +44,13 @@ All problem set solutions should be submitted on Canvas directly as a `.ipynb` f
 15. **February 24** - Problem Set + Midterm Review Quetsions + Practice Exam Logistics 
 16. **February 26** - Midterm
 17. **March 3** - [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/undergrad_computational_macro/slides/linear_state_space_models.html)
-18. **March 5** - [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/undergrad_computational_macro/slides/permanent_income.html)
-19. **March 10** - [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/undergrad_computational_macro/slides/permanent_income.html) and [Markov Chains with Applications to Unemployment and Asset Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/markov_chains_applications.html)
-20. **March 12** - [Markov Chains with Applications to Unemployment and Asset Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/markov_chains_applications.html) and [Search](https://jlperla.github.io/undergrad_computational_macro/slides/search.html)
-21. **March 17** - [Search and Dynamic Programming](https://jlperla.github.io/undergrad_computational_macro/slides/search_dynamic_programming.html)
-22. **March 19** - Problem Set and Midterm Exam Review
-23. **March 24** - [Asset Pricing, Lucas Trees, and Option Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/asset_pricing_lucas_trees.html)
+18. **March 5** - Finish  [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/undergrad_computational_macro/slides/linear_state_space_models.html) and introduce [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/undergrad_computational_macro/slides/permanent_income.html)
+19. **March 10** - [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/undergrad_computational_macro/slides/permanent_income.html) 
+20. **March 12** - Finish [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/undergrad_computational_macro/slides/permanent_income.html) and start [Markov Chains with Applications to Unemployment and Asset Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/markov_chains_applications.html)
+21. **March 17** - [Markov Chains with Applications to Unemployment and Asset Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/markov_chains_applications.html) and [Search and Dynamic Programming](https://jlperla.github.io/undergrad_computational_macro/slides/search_dynamic_programming.html)
+22. **March 19** - [Search and Dynamic Programming](https://jlperla.github.io/undergrad_computational_macro/slides/search_dynamic_programming.html)
+23. **March 24** - [Search and Dynamic Programming](https://jlperla.github.io/undergrad_computational_macro/slides/search_dynamic_programming.html) and [Asset Pricing, Lucas Trees, and Option Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/asset_pricing_lucas_trees.html)
 24. **March 26** - [Asset Pricing, Lucas Trees, and Option Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/asset_pricing_lucas_trees.html)
-25. **March 31** - [Rational Expectations and Markov Perfect Equilibrium](https://jlperla.github.io/undergrad_computational_macro/slides/rational_expectations_markov_perfect_equilibrium.html)
-26. **April 2** - Problem Set Review
-27. **April 7** - Finish [Rational Expectations and Markov Perfect Equilibrium](https://jlperla.github.io/undergrad_computational_macro/slides/rational_expectations_markov_perfect_equilibrium.html) and answer any Practice Problems
+25. **March 31** - Problem Set 4 and 5 Review
+26. **April 2** - [Asset Pricing, Lucas Trees, and Option Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/asset_pricing_lucas_trees.html) and [Rational Expectations and Markov Perfect Equilibrium](https://jlperla.github.io/undergrad_computational_macro/slides/rational_expectations_markov_perfect_equilibrium.html) if time-permits
+27. **April 7** - [Rational Expectations and Markov Perfect Equilibrium](https://jlperla.github.io/undergrad_computational_macro/slides/rational_expectations_markov_perfect_equilibrium.html) if time permits and answer any Practice Problems
