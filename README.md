@@ -41,7 +41,7 @@ All problem set solutions should be submitted on Canvas directly as a `.ipynb` f
 12. **February 12** - [Wealth Distribution, Firm Dynamics, and Inequality](https://jlperla.github.io/undergrad_computational_macro/slides/wealth_distribution_firm_dynamics.html)
 13. **February 17** - SPRING BREAK
 14. **February 19** - SPRING BREAK
-15. **February 24** - Problem Set + Midterm Review Quetsions + Practice Exam Logistics 
+15. **February 24** - Problem Set + Midterm Review Questions + Practice Exam Logistics 
 16. **February 26** - Midterm
 17. **March 3** - [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/undergrad_computational_macro/slides/linear_state_space_models.html)
 18. **March 5** - Finish  [Linear State Space Models, Asset Pricing, and the Kalman Filter](https://jlperla.github.io/undergrad_computational_macro/slides/linear_state_space_models.html) and introduce [Optimal Consumption, Savings, and the Permanent Income Model](https://jlperla.github.io/undergrad_computational_macro/slides/permanent_income.html)
@@ -51,6 +51,6 @@ All problem set solutions should be submitted on Canvas directly as a `.ipynb` f
 22. **March 19** - [Search and Dynamic Programming](https://jlperla.github.io/undergrad_computational_macro/slides/search_dynamic_programming.html)
 23. **March 24** - [Search and Dynamic Programming](https://jlperla.github.io/undergrad_computational_macro/slides/search_dynamic_programming.html) and [Asset Pricing, Lucas Trees, and Option Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/asset_pricing_lucas_trees.html)
 24. **March 26** - [Asset Pricing, Lucas Trees, and Option Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/asset_pricing_lucas_trees.html)
-25. **March 31** - Problem Set 4 and 5 Review
-26. **April 2** - [Asset Pricing, Lucas Trees, and Option Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/asset_pricing_lucas_trees.html) and [Rational Expectations and Markov Perfect Equilibrium](https://jlperla.github.io/undergrad_computational_macro/slides/rational_expectations_markov_perfect_equilibrium.html) if time-permits
+25. **March 31** - [Asset Pricing, Lucas Trees, and Option Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/asset_pricing_lucas_trees.html) and [Rational Expectations and Markov Perfect Equilibrium](https://jlperla.github.io/undergrad_computational_macro/slides/rational_expectations_markov_perfect_equilibrium.html) if time-permits
+26. **April 2** -  Problem Set 4 and 5 Review
 27. **April 7** - [Rational Expectations and Markov Perfect Equilibrium](https://jlperla.github.io/undergrad_computational_macro/slides/rational_expectations_markov_perfect_equilibrium.html) if time permits and answer any Practice Problems
