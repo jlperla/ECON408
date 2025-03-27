@@ -53,4 +53,4 @@ All problem set solutions should be submitted on Canvas directly as a `.ipynb` f
 24. **March 26** - [Asset Pricing, Lucas Trees, and Option Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/asset_pricing_lucas_trees.html)
 25. **March 31** - [Asset Pricing, Lucas Trees, and Option Pricing](https://jlperla.github.io/undergrad_computational_macro/slides/asset_pricing_lucas_trees.html) and [Rational Expectations and Markov Perfect Equilibrium](https://jlperla.github.io/undergrad_computational_macro/slides/rational_expectations_markov_perfect_equilibrium.html) if time-permits
 26. **April 2** -  Problem Set 4 and 5 Review
-27. **April 7** - [Rational Expectations and Markov Perfect Equilibrium](https://jlperla.github.io/undergrad_computational_macro/slides/rational_expectations_markov_perfect_equilibrium.html) if time permits and answer any Practice Problems
+27. **April 7** - [Rational Expectations and Markov Perfect Equilibrium](https://jlperla.github.io/undergrad_computational_macro/slides/rational_expectations_markov_perfect_equilibrium.html) if time permits and answer any Practice Problems/Problem Set 6 review questions
